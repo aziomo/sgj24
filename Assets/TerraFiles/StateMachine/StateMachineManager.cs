@@ -5,17 +5,19 @@ using UnityEngine;
 public class StateMachineManager : MonoBehaviour{
     [SerializeField] private List<State> states = new();
     [SerializeField] private State currentState;
+    private float timer = 0;
     private void Start(){
         currentState = states[0];
         currentState.StartState();
     }
     public void ChangeState(States newState, bool force = false){
         if((currentState == GetState(newState)) || (currentState.isAction && !force)) return;
-        Debug.Log((!currentState.isAction || force));
-        Debug.Log($"change state from {currentState} to {GetState(newState)}");
-        currentState.EndState();
-        currentState = GetState(newState);
-        currentState.StartState();
+        if(timer < Time.time){
+            currentState.EndState();
+            currentState = GetState(newState);
+            currentState.StartState();
+            timer = Time.time + .01f;
+        }
     }
     private void Update(){
         currentState.UpdateState();
