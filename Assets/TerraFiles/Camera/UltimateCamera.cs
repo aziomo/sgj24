@@ -11,6 +11,8 @@ public class UltimateCamera : MonoBehaviour{
     public bool freeZSlave = false;
     protected Camera cam;
     public Vector3 offset;
+    public float rotationAngle = 0f;
+    public float rotationSpeed = 10f;
     protected Vector3 velocity;
     public static UltimateCamera instance;
  
@@ -25,6 +27,12 @@ public class UltimateCamera : MonoBehaviour{
     private void FixedUpdate() {
         Move();
         Zoom();
+    }
+    public void RotateAroundTarget(float angleDelta) {
+        rotationAngle += angleDelta * rotationSpeed * Time.deltaTime;
+        Quaternion rotation = Quaternion.Euler(0, rotationAngle, 0);
+        Vector3 rotatedOffset = rotation * offset;
+        transform.position = target.position + rotatedOffset;
     }
     void Move(){
         Vector3 newPosition = target.position + offset;
