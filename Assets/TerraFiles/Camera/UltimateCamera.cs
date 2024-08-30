@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class UltimateCamera : MonoBehaviour{
@@ -9,6 +8,8 @@ public class UltimateCamera : MonoBehaviour{
     public float smooth = 0.5f;
     public float zoom = 20f;
     public CameraMode currentCameraMode = CameraMode.Normal;
+    [Range(0,1)]
+    public int yMovement = 0;
     protected Camera cam;
     public Vector3 offset;
     public float rotationAngle = 0f;
@@ -46,17 +47,19 @@ public class UltimateCamera : MonoBehaviour{
     }
     private void MoveNormal(){
         Vector3 newPosition = target.position + offset;
+        var y = transform.position.y;
         transform.position = Vector3.SmoothDamp(transform.position, new Vector3(
-                newPosition.x += cam_math.CalculateShakeFunctionX(),
-                newPosition.y += cam_math.CalculateShakeFunctionY(),
+                newPosition.x + cam_math.CalculateShakeFunctionX(),
+                y * yMovement  + newPosition.y * Mathf.Abs(yMovement - 1)+ cam_math.CalculateShakeFunctionY(),
                 transform.position.z), 
         ref velocity, smooth);
     }
     private void MoveLookAtPlayer(){
         Vector3 newPosition = target.position + offset;
+        var y = transform.position.y;
         transform.position = Vector3.SmoothDamp(transform.position, new Vector3(
-                newPosition.x += cam_math.CalculateShakeFunctionX(),
-                newPosition.y += cam_math.CalculateShakeFunctionY(),
+                newPosition.x + cam_math.CalculateShakeFunctionX(),
+                y * yMovement  + newPosition.y * Mathf.Abs(yMovement - 1) + cam_math.CalculateShakeFunctionY(),
                 transform.position.z), 
         ref velocity, smooth);
         Vector3 direction = target.position - transform.position;
@@ -66,10 +69,11 @@ public class UltimateCamera : MonoBehaviour{
         transform.LookAt(target.position);
     }
     private void MoveZAxiesFree(){
+        var y = transform.position.y;
         Vector3 newPosition = target.position + offset;
         transform.position = Vector3.SmoothDamp(transform.position, new Vector3(
-            newPosition.x += cam_math.CalculateShakeFunctionX(),
-            newPosition.y += cam_math.CalculateShakeFunctionY(),
+            newPosition.x + cam_math.CalculateShakeFunctionX(),
+            y * yMovement  + newPosition.y * Mathf.Abs(yMovement - 1) + cam_math.CalculateShakeFunctionY(),
             newPosition.z), 
         ref velocity, smooth);
         Vector3 direction = target.position - transform.position;
