@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  smooth: 0.2
+  smooth: 0.3
   zoom: 35
   currentCameraMode: 1
   yMovement: 0

@@ -25,6 +25,7 @@ public abstract class State : MonoBehaviour{
             rb.velocity =new Vector3(inputMovement.x * stats.speed * stats.sprintMultiplier, rb.velocity.y, inputMovement.z * stats.speed* stats.sprintMultiplier);
         }else{
             rb.velocity =new Vector3(inputMovement.x * stats.speed, rb.velocity.y, inputMovement.z * stats.speed);
+            Debug.Log(rb.velocity);
         }
     }
 }
