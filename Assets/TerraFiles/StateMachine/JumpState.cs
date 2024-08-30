@@ -8,9 +8,11 @@ public class JumpState : State{
     }
     public override void UpdateState(){
         var inputMovement = new Vector3(Input.GetAxis("Horizontal"), 0 , Input.GetAxis("Vertical"));
-        rb.velocity =new Vector3(inputMovement.x * stats.speed, rb.velocity.y, inputMovement.z * stats.speed);
+        if(inputMovement != Vector3.zero){
+            Move(inputMovement);
+        }
         
-        if(rb.velocity.y <= 0){
+        if(rb.velocity.y < 0 || rb.velocity.y < 0 && groundCheck.CheckIfOnGround()){
             state.ChangeState(States.Fall, true);
         }
     }
