@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour,IHealth{
     public float sprintMultiplier = 2;
     public float jumpForce = 2;
     public float health = 100;
+    public float rotationSpeed = 40;
     private void Awake(){
         instance = this;
     }

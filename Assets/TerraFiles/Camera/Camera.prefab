@@ -152,12 +152,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  smooth: 0.3
+  smooth: 0.2
   zoom: 35
-  freeZSlave: 0
+  freeCameraSlave: 0
   offset: {x: 0, y: 11, z: -11}
   rotationAngle: 0
-  rotationSpeed: 5
+  rotationSpeed: 1
+  rotationSmooth: 0.2
 --- !u!114 &-5064138914861838841
 MonoBehaviour:
   m_ObjectHideFlags: 0

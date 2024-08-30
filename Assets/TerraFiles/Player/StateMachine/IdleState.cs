@@ -4,8 +4,9 @@ using UnityEditor.Callbacks;
 using UnityEngine;
 
 public class IdleState : State{
+    public float dragChange = 10;
     public override void StartState(){
-        rb.velocity = Vector3.zero;
+        rb.drag += dragChange;
     }
     public override void UpdateState(){ 
         if(!groundCheck.CheckIfOnGround()) {
@@ -13,5 +14,7 @@ public class IdleState : State{
             return;
         }
     }
-    public override void EndState(){}
+    public override void EndState(){
+        rb.drag -= dragChange;
+    }
 }
