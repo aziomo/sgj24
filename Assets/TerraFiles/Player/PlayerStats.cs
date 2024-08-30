@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour,IHealth{
     public static PlayerStats instance;
     public float speed = 1;
+    public float sprintMultiplier = 2;
     public float jumpForce = 2;
     public float health = 100;
     private void Awake(){
