@@ -154,7 +154,8 @@ MonoBehaviour:
   target: {fileID: 0}
   smooth: 0.2
   zoom: 35
-  freeCameraSlave: 0
+  currentCameraMode: 1
+  yMovement: 0
   offset: {x: 0, y: 11, z: -11}
   rotationAngle: 0
   rotationSpeed: 1
