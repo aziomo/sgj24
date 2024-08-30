@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 2137090986766583870}
   - component: {fileID: 6624986746861691844}
   - component: {fileID: 632729417793245135}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: PlayerLasso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 5
-  health: 100
 --- !u!114 &702364621327949131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,7 +500,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAction: 1
-  gravityChange: 20
 --- !u!114 &632729417793245135
 MonoBehaviour:
   m_ObjectHideFlags: 0
