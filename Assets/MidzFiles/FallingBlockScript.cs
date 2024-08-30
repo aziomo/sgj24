@@ -64,14 +64,12 @@ public class NonSingletonCollision : MonoBehaviour
         {
             Debug.Log("Collision detected with the Singleton (GameManager)!");
             // Add logic here for what should happen during the collision
-            if (childScript != null)
-            {
-                childScript.OnSignalReceived();
-            }
+            childScript.OnSignalReceived();
+
             StartCoroutine(Fall());
         }
     }
-    /*
+    
     void OnTriggerEnter(Collider other)
     {
         // If using a trigger collider
@@ -89,7 +87,7 @@ public class NonSingletonCollision : MonoBehaviour
 
         }
     }
-    */
+    
 
     private IEnumerator Fall()
     {
