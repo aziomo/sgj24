@@ -29,6 +29,7 @@ public class UltimateCamera : MonoBehaviour{
         Zoom();
     }
     public void RotateAroundTarget(float angleDelta) {
+        if(!freeZSlave) return;
         rotationAngle += angleDelta * rotationSpeed * Time.deltaTime;
         Quaternion rotation = Quaternion.Euler(0, rotationAngle, 0);
         Vector3 rotatedOffset = rotation * offset;
