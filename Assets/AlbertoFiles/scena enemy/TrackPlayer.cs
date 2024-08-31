@@ -22,11 +22,23 @@ public class TrackPlayer : MonoBehaviour
     }
 
 
+    // in degrees
+    public float fieldOfView = 45f;
+
+    bool isAggroed = false;
+
+
+    bool isInFov() {
+        return true;
+    }
+
+
     void Update()
     {
         RaycastHit hit;
         Vector3 turretToPlayer = player.transform.position - transform.position;
         if (Physics.Raycast(transform.position, turretToPlayer, out hit)) {
+
             if (hit.collider.gameObject == player && hit.distance < distance) {
 
                 Quaternion targetRotation = Quaternion.LookRotation(turretToPlayer);
