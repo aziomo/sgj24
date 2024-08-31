@@ -5261,6 +5261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0968f4120b47c714c98ea780d4350994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addTimeCoyote: 0.5
 --- !u!114 &5525134995677700563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5275,7 +5276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   sprintMultiplier: 1.8
-  jumpForce: 30
+  jumpForce: 40
   health: 100
   rotationSpeed: 40
 --- !u!114 &702364621327949131
