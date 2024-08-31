@@ -14,6 +14,7 @@ public class RollingBossState : State{
         anim.Play("FallKefir");
         yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[2].length);
         fallParticle.Play();
+        UltimateCamera.instance.StartCameraShake(.6f, 50);
         yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[3].length + anim.runtimeAnimatorController.animationClips[4].length);
         state.ChangeState(States.BossIdle);
     }

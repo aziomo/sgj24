@@ -100,6 +100,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 5558833069298454136, guid: 26e498e22174a654ea6b1a268fb79070,
+        type: 3}
+      propertyPath: timeBetweenAttacksMax
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

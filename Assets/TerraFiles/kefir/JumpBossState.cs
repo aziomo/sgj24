@@ -14,6 +14,7 @@ public class JumpBossState : State{
         anim.Play("JumpKefir");
         yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[1].length- .3f);
         jumpParticle.Play();
+        UltimateCamera.instance.StartCameraShake(.6f, 50);
         yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[1].length);
         state.ChangeState(States.BossIdle);
     }
