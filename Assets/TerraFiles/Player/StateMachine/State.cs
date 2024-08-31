@@ -19,11 +19,13 @@ public abstract class State : MonoBehaviour{
     public abstract void StartState();
     public abstract void UpdateState();
     public abstract void EndState();
-    public virtual void Move(Vector3 inputMovement){
+    public virtual void Move(){
+        var inputMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0 , Input.GetAxisRaw("Vertical"));
         if(Input.GetKey(KeyCode.LeftShift)){
-            rb.velocity =new Vector3(inputMovement.x * stats.speed * stats.sprintMultiplier, rb.velocity.y, inputMovement.z * stats.speed);
+            rb.velocity =new Vector3(inputMovement.x * stats.speed * stats.sprintMultiplier, rb.velocity.y, inputMovement.z * stats.speed* stats.sprintMultiplier);
         }else{
             rb.velocity =new Vector3(inputMovement.x * stats.speed, rb.velocity.y, inputMovement.z * stats.speed);
+            Debug.Log(rb.velocity);
         }
     }
 }
