@@ -6,6 +6,8 @@ public class BoulderBehaviour : MonoBehaviour
 {
     private Rigidbody rb;
 
+    
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -35,6 +37,8 @@ public class BoulderBehaviour : MonoBehaviour
             if (objectRenderer != null)
             {
                 objectRenderer.enabled = false;
+                
+
             }
 
 
