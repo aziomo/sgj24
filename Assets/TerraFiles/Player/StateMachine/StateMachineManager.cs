@@ -12,6 +12,7 @@ public class StateMachineManager : MonoBehaviour{
     public virtual void ChangeState(States newState, bool force = false){
         if((currentState == GetState(newState)) || (currentState.isAction && !force)) return;
         if(timer < Time.time){
+            Debug.Log($"change state from {currentState} to {GetState(newState)}");
             currentState.EndState();
             currentState = GetState(newState);
             currentState.StartState();
