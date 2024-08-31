@@ -11,7 +11,6 @@ public class JumpState : State{
         if(inputMovement != Vector3.zero){
             Move();
         }
-        
         if(rb.velocity.y < 0 || rb.velocity.y < 0 && groundCheck.CheckIfOnGround()){
             state.ChangeState(States.Fall, true);
         }
