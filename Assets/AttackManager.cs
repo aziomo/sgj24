@@ -11,6 +11,7 @@ public class AttackManager : MonoBehaviour{
     public bool grabWeapont = false;
     public void GrabWeapont(){
         grabWeapont = true;
+        anim.Play("PlayerIdleSword");
     }
     public void DetectedEnemy(IHealth enemy){
         if(damageCooldown <= 0){
