@@ -5086,7 +5086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  sprintMultiplier: 1.6
+  sprintMultiplier: 1.8
   jumpForce: 26
   health: 100
   rotationSpeed: 40
