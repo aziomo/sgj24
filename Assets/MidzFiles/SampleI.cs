@@ -19,6 +19,12 @@ public class SampleI : MonoBehaviour, IInteract
 
     private bool displaylock = false;
 
+
+    public bool explode = true;
+
+
+
+
     void Start()
     {
         if (PlayerStats.instance != null)
@@ -36,8 +42,18 @@ public class SampleI : MonoBehaviour, IInteract
 
         if (distanceToPlayer < detectionRange & angle < 45)
         {
-            StartCoroutine(Explode());
-            displaylock = true;
+
+
+            if (explode == true)
+            {
+                StartCoroutine(Explode());
+                displaylock = true;
+            }
+
+
+
+
+
         }
 
     }
@@ -109,7 +125,7 @@ public class SampleI : MonoBehaviour, IInteract
 
                 spriteObject.layer = layerIndex;
 
-                Debug.Log("Layer = " + layerIndex);
+                //Debug.Log("Layer = " + layerIndex);
             }
 
             spriteObject.transform.position = transform.position;

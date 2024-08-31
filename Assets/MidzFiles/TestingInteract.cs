@@ -18,6 +18,7 @@ public class TestingInteract : MonoBehaviour
                 interactables.Add(interactable);
             }
         }
+
     }
 
     void Update()

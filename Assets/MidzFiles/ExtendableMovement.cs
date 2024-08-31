@@ -21,6 +21,10 @@ public class MoveToPositions : MonoBehaviour
 
     private float rememberspeed = 5.0f;
 
+
+    public bool stop = false;
+
+
     void Start()
     {
         rememberspeed = speed;
@@ -70,6 +74,12 @@ public class MoveToPositions : MonoBehaviour
                 else
                 {
                     Destroy(gameObject);
+                }
+
+
+                if (stop == true)
+                {
+                    this.enabled = false;
                 }
             }
         }

@@ -62,7 +62,7 @@ public class NonSingletonCollision : MonoBehaviour
         // Check if the collided object is the Singleton instance
         if (collision.gameObject == PlayerStats.instance.gameObject)
         {
-            Debug.Log("Collision detected with the Singleton (GameManager)!");
+            //Debug.Log("Collision detected with the Singleton (GameManager)!");
             // Add logic here for what should happen during the collision
             childScript.OnSignalReceived();
 
@@ -75,7 +75,7 @@ public class NonSingletonCollision : MonoBehaviour
         // If using a trigger collider
         if (other.gameObject == PlayerStats.instance.gameObject)
         {
-            Debug.Log("Trigger detected with the Singleton (GameManager)!");
+            //Debug.Log("Trigger detected with the Singleton (GameManager)!");
             // Add logic here for what should happen during the trigger
 
             childScript.OnSignalReceived();
@@ -126,7 +126,7 @@ public class NonSingletonCollision : MonoBehaviour
     {
         if (fall == true)
         {
-            transform.position += direction * 5f * Time.deltaTime;
+            transform.position += direction * 2f * Time.deltaTime;
         }
 
     }

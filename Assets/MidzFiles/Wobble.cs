@@ -7,7 +7,7 @@ public class Wobble : MonoBehaviour
 
     public bool shake = false;
 
-    private bool activate = false;
+    public bool activate = false;
 
     float x = 0f;
     float y = 0f;
