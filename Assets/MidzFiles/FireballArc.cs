@@ -1,7 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+
 
 public class MoveInArc : MonoBehaviour
 {
+    private List<IHealth> interactables = new List<IHealth>();
+
     public Transform startPoint;  // The starting point of the arc
     public Transform endPoint;    // The ending point of the arc
     public Transform controlPoint; // The control point that defines the arc's height
@@ -22,6 +27,18 @@ public class MoveInArc : MonoBehaviour
         endPos = endPoint.position;
         controlPos = controlPoint.position;
         elapsedTime = timeoffset;
+
+
+        MonoBehaviour[] allObjects = FindObjectsOfType<MonoBehaviour>();
+        foreach (MonoBehaviour obj in allObjects)
+        {
+            IHealth interactable = obj as IHealth;
+            if (interactable != null)
+            {
+                interactables.Add(interactable);
+            }
+        }
+
     }
 
     void Update()
@@ -62,7 +79,10 @@ public class MoveInArc : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             // Disable the collider to turn off collision
-
+            foreach (IHealth interactable in interactables)
+            {
+                interactable.TakeDamage(20);
+            }
 
             // Make the object invisible by disabling the MeshRenderer
             MeshRenderer objectRenderer = GetComponent<MeshRenderer>();
