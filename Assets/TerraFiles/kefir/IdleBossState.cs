@@ -9,7 +9,7 @@ public class IdleBossState : State{
     private float timer = 0;
     public States[] attackList;
     public override void StartState(){
-        anim.Play("IdleKefir");
+        anim.CrossFade("IdleKefir", 0);
         timer = Time.time + Random.Range(timeBetweenAttacksMin, timeBetweenAttacksMax);
     }
     public override void UpdateState(){ 
