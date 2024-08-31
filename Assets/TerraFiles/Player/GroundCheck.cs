@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour{
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private float distance = .1f;
+    [SerializeField] private float radius = .1f;
     [SerializeField] private LayerMask ground;
     public bool CheckIfOnGround(){
-        return Physics.Raycast(groundCheck.position,Vector2.down, distance, ground);
+        return Physics.OverlapSphere(groundCheck.position, radius, ground).Length > 0;
+    }
+    private void OnDrawGizmosSelected(){
+        if (groundCheck != null){
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(groundCheck.position, radius);
+        }
     }
 }

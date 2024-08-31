@@ -1106,6 +1106,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_KefirBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 6891689517395736459, guid: 74c2f36ddf4ca6f468af63d1fce2272b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

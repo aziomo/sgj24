@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JumpState : State{
     public override void StartState(){
-        rb.AddForce(stats.jumpForce * 100 * Vector3.up);
+        rb.velocity = new Vector3(rb.velocity.x, stats.jumpForce, rb.velocity.z);
     }
     public override void UpdateState(){
         var inputMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0 , Input.GetAxisRaw("Vertical")).normalized;
