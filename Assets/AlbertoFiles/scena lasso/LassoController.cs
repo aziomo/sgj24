@@ -1,29 +1,25 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LassoController : MonoBehaviour
 {
     
     public GameObject lasso;
-    // public GameObject lassoPrefab;
+    public GameObject lassoHoop;
     
-    public float throwDistance = 5f;
-
+    public float throwDistance = 15f;
     private bool isFlying = false;
-
-    public float speed = 5f;
-
+    public float speed = 20f;
     private float timeThrowBegin = -1;
-
 
     private Quaternion angleThrownAt;
     private Vector3 positionThrownAt;
 
     private Vector3 lassoStartOffset = new Vector3(1, 0.25f, 0.1f);
 
-    public GameObject lassoHoop;
 
     void Start()
     {
