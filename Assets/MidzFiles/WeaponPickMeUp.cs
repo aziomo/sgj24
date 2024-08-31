@@ -9,6 +9,10 @@ public class WeaponPickMeUp : MonoBehaviour, IInteract
     float distanceToPlayer = 5f;
     float angle = 0f;
 
+
+    private AttackManager attackManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,16 +25,15 @@ public class WeaponPickMeUp : MonoBehaviour, IInteract
     public void Interact()
     {
 
-        if (distanceToPlayer < 8 & angle < 45)
+        if (distanceToPlayer < 4 & angle < 45)
         {
 
 
 
             Debug.Log("Ok");
 
-
-
-
+            attackManager = player.GetComponent<AttackManager>();
+            attackManager.GrabWeapont();
         }
 
     }
