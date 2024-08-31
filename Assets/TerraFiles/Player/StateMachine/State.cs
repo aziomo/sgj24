@@ -8,6 +8,7 @@ public abstract class State : MonoBehaviour{
     protected GroundCheck groundCheck;
     protected PlayerStats stats;
     protected PlayerGravity gravity;
+    protected Animator anim;
     public bool isAction = false;
     public virtual void Awake(){
         state = GetComponent<StateMachineManager>();
@@ -15,6 +16,7 @@ public abstract class State : MonoBehaviour{
         groundCheck = GetComponent<GroundCheck>();
         stats = GetComponent<PlayerStats>();
         gravity = GetComponent<PlayerGravity>();
+        anim = GetComponent<Animator>();
     }
     public abstract void StartState();
     public abstract void UpdateState();
@@ -25,7 +27,6 @@ public abstract class State : MonoBehaviour{
             rb.velocity =new Vector3(inputMovement.x * stats.speed * stats.sprintMultiplier, rb.velocity.y, inputMovement.z * stats.speed* stats.sprintMultiplier);
         }else{
             rb.velocity =new Vector3(inputMovement.x * stats.speed, rb.velocity.y, inputMovement.z * stats.speed);
-            Debug.Log(rb.velocity);
         }
     }
 }

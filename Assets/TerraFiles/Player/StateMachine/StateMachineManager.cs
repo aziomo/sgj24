@@ -3,27 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StateMachineManager : MonoBehaviour{
-    [SerializeField] private List<State> states = new();
-    [SerializeField] private State currentState;
-    private float timer = 0;
-    private void Start(){
-        currentState = states[0];
+    [SerializeField] protected List<State> states = new();
+    [SerializeField] protected State currentState;
+    protected float timer = 0;
+    protected virtual void Start(){
         currentState.StartState();
     }
-    public void ChangeState(States newState, bool force = false){
+    public virtual void ChangeState(States newState, bool force = false){
         if((currentState == GetState(newState)) || (currentState.isAction && !force)) return;
         if(timer < Time.time){
+            Debug.Log($"change state from {currentState} to {GetState(newState)}");
             currentState.EndState();
             currentState = GetState(newState);
             currentState.StartState();
             timer = Time.time + .01f;
         }
     }
-    private void Update(){
+    protected virtual void Update(){
         currentState.UpdateState();
     }
 
-    private State GetState(States state){
+    protected virtual State GetState(States state){
         return state switch{
             States.Idle => states[0],
             States.Move => states[1],
@@ -39,5 +39,8 @@ public enum States{
     Move,
     Crouch,
     Jump,
-    Fall
+    Fall,
+    BossIdle,
+    BossJumpAttack,
+    BossRolling
 }
