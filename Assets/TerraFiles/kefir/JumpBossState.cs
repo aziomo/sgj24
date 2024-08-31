@@ -15,7 +15,7 @@ public class JumpBossState : State{
         yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[1].length- .3f);
         jumpParticle.Play();
         UltimateCamera.instance.StartCameraShake(.6f, 50);
-        yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[1].length);
+        yield return new WaitForSeconds(.3f);
         state.ChangeState(States.BossIdle);
     }
     public override void EndState(){}

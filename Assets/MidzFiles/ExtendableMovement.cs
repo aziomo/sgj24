@@ -9,7 +9,7 @@ public class MoveToPositions : MonoBehaviour
     // Speed at which the object moves
     public float speed = 5.0f;
 
-    public float rotationSpeed = 2.0f;
+    //public float rotationSpeed = 2.0f;
 
     public bool turboreturn = false;
 
@@ -56,10 +56,10 @@ public class MoveToPositions : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetTransform.position, speed * Time.deltaTime);
 
         // Smoothly rotate the object towards the target rotation
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetTransform.rotation, rotationSpeed * Time.deltaTime);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, targetTransform.rotation, rotationSpeed * Time.deltaTime);
 
         // Check if the object has reached the target position and rotation
-        if (transform.position == targetTransform.position && Quaternion.Angle(transform.rotation, targetTransform.rotation) < 0.1f)
+        if (transform.position == targetTransform.position)
         {
             // Move to the next position in the list
             currentPositionIndex++;
