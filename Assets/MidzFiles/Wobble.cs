@@ -13,16 +13,13 @@ public class Wobble : MonoBehaviour
     float y = 0f;
     float z = 0f;
 
+    private Vector3 parentPosition = Vector3.up;
 
-    Vector3 currentLocalPosition = Vector3.up;
-
-    Vector3 rememberLocalPosition = Vector3.up;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentLocalPosition = transform.localPosition;
-        rememberLocalPosition = currentLocalPosition;
+        
     }
 
     // Update is called once per frame
@@ -32,27 +29,20 @@ public class Wobble : MonoBehaviour
         {
             if (shake == false)
             {
-                
+                parentPosition = transform.parent.position;
 
                 x += 0.01f;
-                y = 0.2f * Mathf.Sin(x);
+                y = 0.5f * Mathf.Sin(x);
 
-
-
-                currentLocalPosition.y = rememberLocalPosition.y + y;
-
-                // Apply the new local position back to the GameObject
-                transform.localPosition = currentLocalPosition;
+                transform.position = new Vector3(transform.position.x, parentPosition.y + y, transform.position.z);
             }
             else
             {
-                
+                parentPosition = transform.parent.position;
                 y += 0.1f;
                 x = 0.03f * Mathf.Sin(y);
-                currentLocalPosition.x = rememberLocalPosition.x + x;
-                z = 0.03f * Mathf.Sin(y * 2);
-                currentLocalPosition.z = rememberLocalPosition.z + z;
-                transform.localPosition = currentLocalPosition;
+                x = 0.03f * Mathf.Sin(y * 2);
+                transform.position = new Vector3(parentPosition.x + x, transform.position.y, parentPosition.z + z);
 
             }
         }
