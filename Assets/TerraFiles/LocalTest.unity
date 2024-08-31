@@ -870,6 +870,25 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &2134796444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2124921159733563886, guid: 74c2f36ddf4ca6f468af63d1fce2272b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8018880115525396731}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2134796455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134796444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80a2d28dfc248b49a2b56e41d9a2409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 100
 --- !u!1001 &647312253957093716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -883,6 +902,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7d66ce0c56492a04eb609da5cf1b529c, type: 2}
+    - target: {fileID: 4323431752915790207, guid: 8b714871c9338034cbec545fc9dae4b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5417416341796138667, guid: 8b714871c9338034cbec545fc9dae4b6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1080,7 +1104,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2124921159733563886, guid: 74c2f36ddf4ca6f468af63d1fce2272b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2134796455}
   m_SourcePrefab: {fileID: 100100000, guid: 74c2f36ddf4ca6f468af63d1fce2272b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
