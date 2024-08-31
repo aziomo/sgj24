@@ -46,7 +46,7 @@ public class AltarGameEnder : MonoBehaviour, IInteract
 
             if (explode == true)
             {
-                StartCoroutine(Explode());
+                StartCoroutine(Explode());///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 displaylock = true;
             }
 
