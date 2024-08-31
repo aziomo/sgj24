@@ -50,7 +50,7 @@ public class UltimateCamera : MonoBehaviour{
         var y = transform.position.y;
         transform.position = Vector3.SmoothDamp(transform.position, new Vector3(
                 newPosition.x + cam_math.CalculateShakeFunctionX(),
-                y * yMovement  + newPosition.y * Mathf.Abs(yMovement - 1) + cam_math.CalculateShakeFunctionY(),
+                y * yMovement  + newPosition.y * Mathf.Abs(yMovement - 1) + cam_math.CalculateShakeFunctionY() * Mathf.Abs(yMovement - 1),
                 transform.position.z), 
         ref velocity, smooth);
     }
@@ -59,7 +59,7 @@ public class UltimateCamera : MonoBehaviour{
         var y = transform.position.y;
         transform.position = Vector3.SmoothDamp(transform.position, new Vector3(
                 newPosition.x + cam_math.CalculateShakeFunctionX(),
-                y * yMovement  + newPosition.y * Mathf.Abs(yMovement - 1) + cam_math.CalculateShakeFunctionY(),
+                y * yMovement  + newPosition.y * Mathf.Abs(yMovement - 1) + cam_math.CalculateShakeFunctionY()* Mathf.Abs(yMovement - 1),
                 transform.position.z), 
         ref velocity, smooth);
         Vector3 direction = target.position - transform.position;
@@ -73,7 +73,7 @@ public class UltimateCamera : MonoBehaviour{
         Vector3 newPosition = target.position + offset;
         transform.position = Vector3.SmoothDamp(transform.position, new Vector3(
             newPosition.x + cam_math.CalculateShakeFunctionX(),
-            y * yMovement  + newPosition.y * Mathf.Abs(yMovement - 1) + cam_math.CalculateShakeFunctionY(),
+            y * yMovement  + newPosition.y * Mathf.Abs(yMovement - 1) + cam_math.CalculateShakeFunctionY()* Mathf.Abs(yMovement - 1),
             newPosition.z), 
         ref velocity, smooth);
         Vector3 direction = target.position - transform.position;
