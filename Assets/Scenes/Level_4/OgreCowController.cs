@@ -13,17 +13,18 @@ public class OgreCowController : MonoBehaviour
     [SerializeField] private float _maxStepDownHeight;
     [SerializeField] private int _groundSamples;
     [SerializeField] private float _obstacleOffset;
+    [SerializeField] private float _obstacleRadius;
     [SerializeField] private LayerMask _groundLayerMask;
     [SerializeField] private LayerMask _obstacleLayerMask;
 
-    private void Update()
+    private void FixedUpdate()
     {
         var targetMovement = transform.position - _player.transform.position;
         targetMovement.y = 0;
         var targetMovementMagnitude = targetMovement.magnitude;
         targetMovement /= targetMovementMagnitude;
 
-        targetMovement *= _movementSpeed * Time.deltaTime;
+        targetMovement *= _movementSpeed * Time.fixedDeltaTime;
 
         var targetPosition = transform.position;
 
@@ -81,7 +82,8 @@ public class OgreCowController : MonoBehaviour
 
         if (Physics.Raycast(origin, Vector3.down, out var hit, _maxStepUpHeight + _maxStepDownHeight, _groundLayerMask))
         {
-            if (!Physics.Raycast(transform.position + Vector3.up * _obstacleOffset, (hit.point - transform.position).normalized, Vector3.Distance(transform.position, hit.point) + 1e-2f, _obstacleLayerMask))
+            if (!Physics.Raycast(transform.position + Vector3.up * _obstacleOffset, (hit.point - transform.position).normalized, Vector3.Distance(transform.position, hit.point) + 1e-2f, _obstacleLayerMask)
+                && !Physics.SphereCast(transform.position + Vector3.up * _obstacleRadius, _obstacleRadius, (hit.point - transform.position).normalized, out _, Vector3.Distance(transform.position, hit.point) + 1e-2f, _obstacleLayerMask))
             {
                 hitPosition = hit.point;
             
