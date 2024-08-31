@@ -17,6 +17,10 @@ public class OgreCowController : MonoBehaviour
     [SerializeField] private LayerMask _groundLayerMask;
     [SerializeField] private LayerMask _obstacleLayerMask;
 
+
+    public bool isCaught = false;
+
+
     private void FixedUpdate()
     {
         var targetMovement = transform.position - _player.transform.position;
@@ -71,7 +75,13 @@ public class OgreCowController : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(lookDirection);
         }
 
-        transform.position = targetPosition;
+        if (isCaught) {
+            transform.position = transform.position;
+        } else {
+            transform.position = targetPosition;
+        }
+
+        
     }
 
     private bool CheckMovementDirection(Vector3 movement, out Vector3 hitPosition)

@@ -20,6 +20,9 @@ public class LassoController : MonoBehaviour
 
     private Vector3 lassoStartOffset = new Vector3(1, 0.25f, 0.1f);
 
+    public bool cowOnLasso = false;
+    public Transform caughtCow = null;
+
 
     void Start()
     {
@@ -37,13 +40,21 @@ public class LassoController : MonoBehaviour
             positionThrownAt = transform.position + new Vector3(1f, 0, 0);
         }
 
-        if (isFlying)
+        if (caughtCow != null) 
+        {
+            lassoHoop.transform.position = caughtCow.transform.position + new Vector3(0, 2, 0);
+        } 
+        else if (isFlying)
         {
             var distanceTravelled = (Time.fixedTime - timeThrowBegin) * speed;
             float height = (float) Math.Sin((distanceTravelled / throwDistance) * Math.PI) * 2.0f;
             var deltaVector = angleThrownAt * new Vector3(0, height, distanceTravelled);
             lassoHoop.transform.position = positionThrownAt + deltaVector;
 
+
+            // if (caughtCow != null) {
+            //     lassoHoop.transform.position = caughtCow.transform.position;
+            // } else 
             if (distanceTravelled > throwDistance)
             {
                 isFlying = false;

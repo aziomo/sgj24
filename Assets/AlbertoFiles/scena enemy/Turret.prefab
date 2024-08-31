@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7387554138256604416}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9989342, z: -0, w: 0.046158567}
+  m_LocalRotation: {x: 0, y: 0.99893427, z: 0, w: 0.046156377}
   m_LocalPosition: {x: 5.16, y: 2.05, z: 2.49}
   m_LocalScale: {x: 1, y: 0.55378, z: 1}
   m_ConstrainProportionsScale: 0
@@ -123,9 +123,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   rotationSpeed: 100
-  distance: 5
+  viewDistance: 5
   projectile: {fileID: 4148902779483991744, guid: 7422c134729377f408928942e8206dfa,
     type: 3}
+  fovAngle: 90
 --- !u!1 &7525872740632411625
 GameObject:
   m_ObjectHideFlags: 0

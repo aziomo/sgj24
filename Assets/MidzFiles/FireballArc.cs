@@ -13,6 +13,9 @@ public class MoveInArc : MonoBehaviour
     private Vector3 endPos;
     private Vector3 controlPos;
     public float timeoffset = 0f;
+
+    public GameObject particlePrefab;
+
     void Start()
     {
         startPos = startPoint.position;
@@ -66,6 +69,20 @@ public class MoveInArc : MonoBehaviour
             if (objectRenderer != null)
             {
                 objectRenderer.enabled = false;
+
+
+                if (particlePrefab != null)
+                {
+                    // Instantiate the particle system
+                    GameObject particleInstance = Instantiate(particlePrefab, transform.position, transform.rotation);
+
+                    // Optionally, destroy the particle system after it has finished playing
+                    ParticleSystem ps = particleInstance.GetComponent<ParticleSystem>();
+                    if (ps != null)
+                    {
+                        Destroy(particleInstance, ps.main.duration + ps.main.startLifetime.constantMax);
+                    }
+                }
             }
 
 
