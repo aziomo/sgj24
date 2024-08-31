@@ -7,7 +7,19 @@ public class AttackManager : MonoBehaviour{
     public Animator anim;
     private float comboTimer = 0;
     private float attackCooldown = 0;
+    private float damageCooldown = 0;
+    public bool grabWeapont = false;
+    public void GrabWeapont(){
+        grabWeapont = true;
+    }
+    public void DetectedEnemy(IHealth enemy){
+        if(damageCooldown <= 0){
+            enemy.TakeDamage(damage);
+            damageCooldown = .1f;
+        }
+    }
     void Update(){
+        if(!grabWeapont) return;
         if(Input.GetKeyDown(KeyCode.Mouse0) && attackCooldown <= 0){
             if(comboTimer > 0){
                 Attack(3);
@@ -16,8 +28,9 @@ public class AttackManager : MonoBehaviour{
                 comboTimer = anim.runtimeAnimatorController.animationClips[2].length + anim.runtimeAnimatorController.animationClips[4].length;
             }
         }
-        comboTimer-= Time.deltaTime;
+        comboTimer -= Time.deltaTime;
         attackCooldown -= Time.deltaTime;
+        damageCooldown -= Time.deltaTime;
     }
     private void Attack(int whichAnimation){
         attackCooldown = anim.runtimeAnimatorController.animationClips[whichAnimation].length;

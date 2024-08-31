@@ -163,6 +163,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1736767380511510214}
+  - component: {fileID: 6326316232375694240}
+  - component: {fileID: 5386036116492969686}
   m_Layer: 0
   m_Name: Daddy'sSausage
   m_TagString: Untagged
@@ -187,6 +189,42 @@ Transform:
   - {fileID: 809303302064931755}
   m_Father: {fileID: 7627417482330657970}
   m_LocalEulerAnglesHint: {x: 0, y: 27.28, z: 90}
+--- !u!136 &6326316232375694240
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4323431752915790207}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0017972159
+  m_Height: 0.009842619
+  m_Direction: 2
+  m_Center: {x: 0.00004329164, y: 0.000009352203, z: 0.0054846094}
+--- !u!114 &5386036116492969686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4323431752915790207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093d97f38b7184042b2170a0415f922c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6095891302673247436}
 --- !u!1 &4657577121667712706
 GameObject:
   m_ObjectHideFlags: 0
@@ -5135,6 +5173,7 @@ GameObject:
   - component: {fileID: 1859525452609624771}
   - component: {fileID: 2224882882821471133}
   - component: {fileID: 1359928935340232574}
+  - component: {fileID: 7340286222273507158}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5391,6 +5430,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   anim: {fileID: 2224882882821471133}
+--- !u!114 &7340286222273507158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6095891302673247436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef77afe7bd9e76541a8f2dd0306fb78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8419229219455378642
 GameObject:
   m_ObjectHideFlags: 0

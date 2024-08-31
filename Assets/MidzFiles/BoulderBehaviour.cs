@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class BoulderBehaviour : MonoBehaviour
 {
+    private List<IHealth> interactables = new List<IHealth>();
+
     private Rigidbody rb;
 
-    
+    public GameObject particlePrefab;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        MonoBehaviour[] allObjects = FindObjectsOfType<MonoBehaviour>();
+        foreach (MonoBehaviour obj in allObjects)
+        {
+            IHealth interactable = obj as IHealth;
+            if (interactable != null)
+            {
+                interactables.Add(interactable);
+            }
+        }
+
     }
 
     void FixedUpdate()
@@ -30,6 +43,29 @@ public class BoulderBehaviour : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Disable the collider to turn off collision
+
+            foreach (IHealth interactable in interactables)
+            {
+                interactable.TakeDamage(40);
+            }
+
+
+
+            Vector3 collisionPoint = collision.contacts[0].point;
+            Quaternion collisionRotation = Quaternion.identity;
+
+            // Instantiate the particle system at the collision point
+            GameObject particleInstance = Instantiate(particlePrefab, collisionPoint, collisionRotation);
+
+            // Optionally, destroy the particle system after it has finished playing
+            ParticleSystem ps = particleInstance.GetComponent<ParticleSystem>();
+            if (ps != null)
+            {
+                Destroy(particleInstance, ps.main.duration + ps.main.startLifetime.constantMax);
+            }
+
+
+
 
 
             // Make the object invisible by disabling the MeshRenderer
