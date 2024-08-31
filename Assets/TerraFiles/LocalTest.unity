@@ -907,7 +907,7 @@ Transform:
   m_GameObject: {fileID: 1911946389}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.9, z: 21.9}
+  m_LocalPosition: {x: 0, y: 11.44, z: 21.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1071,6 +1071,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558833069298454136, guid: 26e498e22174a654ea6b1a268fb79070,
+        type: 3}
+      propertyPath: attackList.Array.data[1]
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

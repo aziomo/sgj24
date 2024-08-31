@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3257278216066952074}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -12.5, z: 0}
+  m_LocalPosition: {x: 0, y: -11.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -665,10 +665,10 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 25
+    angle: 27.4
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0.36
+    radiusThickness: 0.04
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: -90, y: 0, z: 0}
@@ -751,7 +751,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1.02
+      value: 1.98
       mode: 0
       spread: 0
       speed:
@@ -4998,6 +4998,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8748629816277078986}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 661c578adcc16994c9c1efb42668c88b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6644400054622781892}
     - targetCorrespondingSourceObject: {fileID: -8162492504825627004, guid: 661c578adcc16994c9c1efb42668c88b,
         type: 3}
       insertIndex: -1
@@ -5079,6 +5083,7 @@ MonoBehaviour:
   states:
   - {fileID: 5558833069298454136}
   - {fileID: 8748629816277078986}
+  - {fileID: 6644400054622781892}
   currentState: {fileID: 8748629816277078986}
 --- !u!95 &6611391707096967384
 Animator:
@@ -5116,7 +5121,7 @@ MonoBehaviour:
   isAction: 0
   timeBetweenAttacksMin: 1
   timeBetweenAttacksMax: 5
-  attackList: 06000000
+  attackList: 0600000007000000
 --- !u!114 &8748629816277078986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5131,6 +5136,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAction: 0
   jumpParticle: {fileID: 7869078373764773505}
+--- !u!114 &6644400054622781892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226757544443993919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e66615ae8eb319429c1d87ca74dde04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAction: 0
+  fallParticle: {fileID: 7869078373764773505}
 --- !u!4 &607504800011584901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 661c578adcc16994c9c1efb42668c88b,
