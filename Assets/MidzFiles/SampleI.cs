@@ -22,8 +22,11 @@ public class SampleI : MonoBehaviour, IInteract
 
     public bool explode = true;
 
+    public Vector3 offset = new Vector3(1,1,1);
 
 
+
+    private OgreCowController Cow;
 
     void Start()
     {
@@ -35,12 +38,17 @@ public class SampleI : MonoBehaviour, IInteract
         {
             Debug.LogError("PlayerStats singleton instance not found!");
         }
+
+
+        Cow = GetComponent<OgreCowController>();
+
+
     }
 
     public void Interact()
     {
 
-        if (distanceToPlayer < detectionRange & angle < 45)
+        if (distanceToPlayer < detectionRange & angle < 45 & Cow.isCaught)
         {
 
 
@@ -100,9 +108,9 @@ public class SampleI : MonoBehaviour, IInteract
         // Calculate the angle between the two vectors
         angle = Vector3.Angle(playerForwardXZ, toTargetXZ);
 
+        
 
-
-        if (distanceToPlayer < detectionRange & angle < 45 & displaylock == false)
+        if (distanceToPlayer < detectionRange & angle < 45 & displaylock == false & Cow.isCaught)
         {
             if (spriteObject == null)
             {
@@ -116,7 +124,7 @@ public class SampleI : MonoBehaviour, IInteract
                 spriteRenderer.sprite = placeholderSprite;
 
                 // Set the position of the new sprite on top of the current object
-                spriteObject.transform.position = transform.position;
+                spriteObject.transform.position = transform.position + offset;
 
                 // Set rotation
                 spriteObject.transform.rotation = Quaternion.Euler(45, 0, 0);
@@ -128,7 +136,7 @@ public class SampleI : MonoBehaviour, IInteract
                 //Debug.Log("Layer = " + layerIndex);
             }
 
-            spriteObject.transform.position = transform.position;
+            spriteObject.transform.position = transform.position + offset;
 
 
 
