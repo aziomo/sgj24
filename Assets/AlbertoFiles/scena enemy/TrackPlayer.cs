@@ -10,7 +10,7 @@ public class TrackPlayer : MonoBehaviour
     public float reloadTime = 3.0f;
 
     public GameObject projectile;
-    public GameObject barrel;
+    public Transform gunpoint;
 
     public int projectilesInSeries = 1;
     public float seriesTimeGap = 0.25f;
@@ -63,7 +63,7 @@ public class TrackPlayer : MonoBehaviour
                             timeLeftInSeriesTimeGap -= Time.deltaTime;
 
                             if (timeLeftInSeriesTimeGap < 0) {
-                                var projectileObj = Instantiate(projectile, barrel.transform.position, transform.rotation);
+                                var projectileObj = Instantiate(projectile, gunpoint.position, transform.rotation);
                                 projectileObj.GetComponent<RocketController>().projectileDirection = transform.rotation;
                                 
                                 timeLeftInSeriesTimeGap = seriesTimeGap;
