@@ -897,6 +897,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1359928935340232574, guid: 8b714871c9338034cbec545fc9dae4b6,
+        type: 3}
+      propertyPath: grabWeapont
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1787477050336848661, guid: 8b714871c9338034cbec545fc9dae4b6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -8,14 +8,14 @@ public class AttackManager : MonoBehaviour{
     private float comboTimer = 0;
     private float attackCooldown = 0;
     private float damageCooldown = 0;
-    private bool grabWeapont = false;
+    public bool grabWeapont = false;
     public void GrabWeapont(){
         grabWeapont = true;
     }
     public void DetectedEnemy(IHealth enemy){
         if(damageCooldown <= 0){
             enemy.TakeDamage(damage);
-            damageCooldown = .5f;
+            damageCooldown = .1f;
         }
     }
     void Update(){
