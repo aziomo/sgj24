@@ -5275,7 +5275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  sprintMultiplier: 1.8
+  sprintMultiplier: 2
   jumpForce: 16
   health: 100
   rotationSpeed: 10
@@ -5383,7 +5383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAction: 1
   gravityChangeSpeed: 35
-  addGravity: 5
+  addGravity: 8
 --- !u!114 &1859525452609624771
 MonoBehaviour:
   m_ObjectHideFlags: 0
