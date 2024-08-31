@@ -8,6 +8,7 @@ public class BossStateMachine : StateMachineManager{
             States.BossIdle => states[0],
             States.BossJumpAttack => states[1],
             States.BossRolling => states[2],
+            States.BossFollow => states[3],
             _ => states[0],
         };
     }

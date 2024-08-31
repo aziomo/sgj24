@@ -5001,6 +5001,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 661c578adcc16994c9c1efb42668c88b,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 7018256735714300710}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 661c578adcc16994c9c1efb42668c88b,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 6644400054622781892}
   m_SourcePrefab: {fileID: 100100000, guid: 661c578adcc16994c9c1efb42668c88b, type: 3}
 --- !u!1 &226757544443993919 stripped
@@ -5052,6 +5056,7 @@ MonoBehaviour:
   - {fileID: 5558833069298454136}
   - {fileID: 8748629816277078986}
   - {fileID: 6644400054622781892}
+  - {fileID: 7018256735714300710}
   currentState: {fileID: 8748629816277078986}
 --- !u!95 &6611391707096967384
 Animator:
@@ -5088,8 +5093,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAction: 0
   timeBetweenAttacksMin: 1
-  timeBetweenAttacksMax: 5
-  attackList: 0600000007000000
+  timeBetweenAttacksMax: 3
+  attackList: 060000000700000008000000
 --- !u!114 &8748629816277078986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5104,6 +5109,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAction: 0
   jumpParticle: {fileID: 7869078373764773505}
+--- !u!114 &7018256735714300710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226757544443993919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eec102d4a7abbe4f9b9d2154cce25db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAction: 0
+  jumpParticle: {fileID: 7869078373764773505}
+  speed: 5
 --- !u!114 &6644400054622781892
 MonoBehaviour:
   m_ObjectHideFlags: 0
