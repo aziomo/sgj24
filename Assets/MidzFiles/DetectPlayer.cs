@@ -34,7 +34,7 @@ public class DetectPlayer : MonoBehaviour
         // Vector from player to target in XZ plane
         Vector3 toTargetXZ = new Vector3(transform.position.x - player.position.x, 0, transform.position.z - player.position.z).normalized;
 
-        if (distanceToPlayer <= 5)
+        if (distanceToPlayer <= 8)
         {
             if (scriptToActivate != null)
             {
