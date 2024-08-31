@@ -176,7 +176,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1396485914}
     - target: {fileID: 3053570237619841545, guid: b53fa3dd146258a4cbfb3a0d95387b5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1050,6 +1050,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1396485914 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5807733880382455613, guid: 8b714871c9338034cbec545fc9dae4b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 852544181}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1477493981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,6 +1477,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2129853879}
+    - target: {fileID: 4323006942044588985, guid: dd409d60f00722e45aec79d79625231f,
+        type: 3}
+      propertyPath: projectilesInSeries
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7387554138256604416, guid: dd409d60f00722e45aec79d79625231f,
         type: 3}
       propertyPath: m_Name

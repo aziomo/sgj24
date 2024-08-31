@@ -6,8 +6,8 @@ public class LassoCaughtEvent : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Catchable")) {
-            print("caught!");
+            print("CAUGHT!!!");
         }
     }
-    
+
 }
