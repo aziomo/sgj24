@@ -3169,7 +3169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932d7720f4a2f5a4e8249dd938907c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 1
+  levelWinCondition: 010000000100000005000000010000000100000001000000
 --- !u!4 &1241514432
 Transform:
   m_ObjectHideFlags: 0
@@ -7807,7 +7808,6 @@ SceneRoots:
   - {fileID: 798314614}
   - {fileID: 1758832020}
   - {fileID: 1357556815}
-  - {fileID: 1241514432}
   - {fileID: 638315571}
   - {fileID: 1821076101}
   - {fileID: 890601746}
@@ -7816,3 +7816,4 @@ SceneRoots:
   - {fileID: 638190859}
   - {fileID: 1333455505}
   - {fileID: 1768996294}
+  - {fileID: 1241514432}
