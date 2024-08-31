@@ -1,34 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class WalkerController : MonoBehaviour
 {
-    List<GameObject> navPoints;
-    int navPointCounter = 0; 
 
-    GameObject pathCollider;
-
-    public LineRenderer path;
-    private bool walkBack = false;
+    // public LineRenderer path;
     public float rotationSpeed = 10.0f;
 
+    public Transform[] patrolPath;
+    private int pathPointCounter = 0;
     
-    public Transform target; // Drag your target object here in the Unity Inspector
     public float speed = 5.0f; // Set the speed you want your object to move at
 
     private NavMeshAgent agent;
+    private Collider pathPointsCollider;
 
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.speed = speed; // Set the agent's speed
-        agent.SetDestination(target.position); // Set the destination to the target's position
-
-        // pathCollider = GameObject.Find("PathCollider");
+        agent.SetDestination(patrolPath[pathPointCounter].position); 
+        pathPointsCollider = GetComponent<CapsuleCollider>();
     }
 
     public bool IsPointWithinCollider(Collider collider, Vector3 point) { 
@@ -37,41 +30,14 @@ public class WalkerController : MonoBehaviour
 
     void Update()
     {
-        // var pointTo = path.GetPosition(navPointCounter) + path.transform.position;
-        // pointTo.y = transform.position.y;
 
-        // float step = speed * Time.deltaTime; // calculate distance to move
-
-        // transform.position = Vector3.MoveTowards(transform.position, pointTo, step);
-        // if ((pointTo - transform.position).magnitude > 0.1){
-        //     // transform.rotation = Quaternion.LookRotation(pointTo - transform.position, Vector3.up);
-
-
-        //     Quaternion targetRotation = Quaternion.LookRotation(pointTo - transform.position, Vector3.up);
-        //     transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
-
-        // }
-
-        // if (IsPointWithinCollider(pathCollider.GetComponent<SphereCollider>(), pointTo)){
-        //     print("walker reached the point");
-            
-        //     if (walkBack){
-        //         navPointCounter -= 1;
-        //     } else {
-        //         navPointCounter += 1;
-        //     }
-            
-
-        //     if (navPointCounter == 0) {
-        //         walkBack = false;
-        //     }
-        //     if (navPointCounter == path.positionCount - 1) {
-        //         walkBack = true;
-        //     }
-
-
-        // }
-
+        if (IsPointWithinCollider(pathPointsCollider, patrolPath[pathPointCounter].position)){
+            pathPointCounter += 1;
+            if (pathPointCounter == patrolPath.Length){
+                pathPointCounter = 0;
+            }
+            agent.SetDestination(patrolPath[pathPointCounter].position); 
+        }
 
     }
 
