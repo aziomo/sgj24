@@ -2847,7 +2847,7 @@ PrefabInstance:
     - target: {fileID: 8119159224832298772, guid: 8b714871c9338034cbec545fc9dae4b6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.4
+      value: 45.4
       objectReference: {fileID: 0}
     - target: {fileID: 8119159224832298772, guid: 8b714871c9338034cbec545fc9dae4b6,
         type: 3}
@@ -4086,6 +4086,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5459d6b51e9288046a397008f9b08e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 2073202307562208684, guid: c59ede63b97324543827bd5bd5220f92,
+    type: 3}
 --- !u!54 &6461109675906592039
 Rigidbody:
   m_ObjectHideFlags: 0
