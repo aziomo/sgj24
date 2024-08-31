@@ -4895,9 +4895,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.65257645
-  m_Height: 2.0074003
+  m_Height: 2.0525537
   m_Direction: 1
-  m_Center: {x: 0.029563904, y: 0.021401525, z: 0.13089216}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1651012230894527584
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4951,7 +4951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   sprintMultiplier: 1.8
-  jumpForce: 26
+  jumpForce: 30
   health: 100
   rotationSpeed: 40
 --- !u!114 &702364621327949131
@@ -5097,7 +5097,7 @@ Transform:
   m_GameObject: {fileID: 8419229219455378642}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.018, z: 0}
+  m_LocalPosition: {x: 0, y: -1.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5139,7 +5139,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1d0777c00efd61b409c214bda1f49d18,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d0777c00efd61b409c214bda1f49d18,
         type: 3}
