@@ -782,7 +782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0acffd8874a2944fa32f883a61e2843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 300
+  timer: 33
 --- !u!4 &485366549
 Transform:
   m_ObjectHideFlags: 0
@@ -1378,7 +1378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initialDelay: 2
   _spawnDelay: {x: 1, y: 3}
-  _spawnDelayShrink: 0.1
+  _spawnDelayShrink: 0.08
   _prefab: {fileID: 3231897270291923527, guid: 75a97e44abeb9be43826d79415993463, type: 3}
   _lanes: 6
   _laneRange: {x: -6.9, y: 4.55}
