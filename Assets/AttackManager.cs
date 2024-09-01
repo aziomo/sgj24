@@ -9,6 +9,11 @@ public class AttackManager : MonoBehaviour{
     private float attackCooldown = 0;
     private float damageCooldown = 0;
     public bool grabWeapont = false;
+    private void Start(){
+        if(grabWeapont){
+            anim.Play(anim.runtimeAnimatorController.animationClips[1].name);
+        }
+    }
     public void GrabWeapont(){
         grabWeapont = true;
         anim.Play("PlayerIdleSword");
