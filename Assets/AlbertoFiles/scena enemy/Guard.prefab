@@ -423,7 +423,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 10
   player: {fileID: 0}
-  speed: 2.5
+  speed: 6.5
+  isDying: 0
   agent: {fileID: 0}
 --- !u!195 &6601040360360657343
 NavMeshAgent:
