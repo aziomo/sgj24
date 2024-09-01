@@ -27,10 +27,20 @@ public class TrackPlayer : MonoBehaviour
     // in degrees
     public float fovAngle = 45f;
     bool isAggroed = false;
+    [SerializeField] private bool blindToCrouched = false;
 
     bool isPlayerInFov() {
         Vector3 directionToPlayer = player.transform.position - transform.position;
         return Vector3.Angle(transform.forward, directionToPlayer) < (fovAngle/2.0);
+    }
+
+
+    bool canSeeCrouchedPlayer() {
+
+        player.GetComponent<StateMachineManager>();
+
+        return true;
+
     }
 
     void Update()
@@ -39,7 +49,7 @@ public class TrackPlayer : MonoBehaviour
         Vector3 directionToPlayer = player.transform.position - transform.position;
         if (Physics.Raycast(transform.position, directionToPlayer, out hit)) {
 
-            if (hit.collider.gameObject == player && hit.distance < viewDistance) // if player is in range
+            if (hit.collider.gameObject == player && hit.distance < viewDistance ) // if player is in range
             {
 
                 if (isPlayerInFov())
