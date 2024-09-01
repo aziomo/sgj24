@@ -21,7 +21,11 @@ public class AttackManager : MonoBehaviour{
         anim.Play("PlayerIdleSword");
     }
     public void DetectedEnemy(IHealth enemy){
-        if(damageCooldown <= 0){
+        if (attackCooldown <= 0){
+            return;
+        }
+
+        if(damageCooldown <= 0 ){
             enemy.TakeDamage(damage);
             // damageCooldown = .1f;
         }
