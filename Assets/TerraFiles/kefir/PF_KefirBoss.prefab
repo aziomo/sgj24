@@ -741,6 +741,7 @@ MonoBehaviour:
     type: 3}
   _deathVfx: {fileID: 2800034577349417615, guid: 007ec6ac0115f254789f3617ac93b569,
     type: 3}
+  hpBAR: {fileID: 4651422201417147315}
 --- !u!136 &2768389315659230605
 CapsuleCollider:
   m_ObjectHideFlags: 0
