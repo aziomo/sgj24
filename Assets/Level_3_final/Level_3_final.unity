@@ -5702,7 +5702,7 @@ MonoBehaviour:
   heightOffset: 1
   detectionRange: 8
   explode: 1
-  offset: {x: 1, y: 3, z: 0.5}
+  offset: {x: 1, y: 2, z: 1}
 --- !u!65 &8628502784875047195
 BoxCollider:
   m_ObjectHideFlags: 0
