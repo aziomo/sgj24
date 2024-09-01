@@ -5114,6 +5114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAction: 0
   jumpParticle: {fileID: 7869078373764773505}
+  hitGround: {fileID: 8300000, guid: 4ab692b85ba8de4489aa93ead03131a5, type: 3}
 --- !u!114 &7018256735714300710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5128,6 +5129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAction: 0
   jumpParticle: {fileID: 7869078373764773505}
+  hitGround: {fileID: 8300000, guid: 4ab692b85ba8de4489aa93ead03131a5, type: 3}
 --- !u!114 &6644400054622781892
 MonoBehaviour:
   m_ObjectHideFlags: 0
