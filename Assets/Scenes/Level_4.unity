@@ -5175,7 +5175,7 @@ PrefabInstance:
     - target: {fileID: 1072174750499643818, guid: 939ef72934325be4f87a355c093170eb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.16
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: 1072174750499643818, guid: 939ef72934325be4f87a355c093170eb,
         type: 3}
@@ -8363,7 +8363,7 @@ PrefabInstance:
     - target: {fileID: 1072174750499643818, guid: 939ef72934325be4f87a355c093170eb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.16
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 1072174750499643818, guid: 939ef72934325be4f87a355c093170eb,
         type: 3}
@@ -18895,6 +18895,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383808973}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1386407836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1386407838}
+  - component: {fileID: 1386407837}
+  m_Layer: 0
+  m_Name: GejManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1386407837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386407836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 932d7720f4a2f5a4e8249dd938907c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 3
+  levelWinCondition: 010000000100000005000000010000000100000001000000
+--- !u!4 &1386407838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386407836}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1387103305
 GameObject:
   m_ObjectHideFlags: 0
@@ -28563,3 +28609,4 @@ SceneRoots:
   - {fileID: 903974772}
   - {fileID: 428617739}
   - {fileID: 2039111463}
+  - {fileID: 1386407838}
