@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour{
             PlayerWon();
         }
     }
-    private void PlayerWon(){
+    public void PlayerWon(){
         mapEnd = true;
         level++;
         if(level - 1 == levelWinCondition.Length){

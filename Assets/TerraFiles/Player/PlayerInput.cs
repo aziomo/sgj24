@@ -6,6 +6,7 @@ public class PlayerInput : MonoBehaviour{
     private StateMachineManager states;
     private GroundCheck groundCheck;
     private PlayerStats stats;
+
     public float addTimeCoyote = .5f;
     private float coyoteTimer = 0;
     private bool groundMemo = false;
@@ -14,6 +15,7 @@ public class PlayerInput : MonoBehaviour{
         groundCheck = GetComponent<GroundCheck>();
         stats = GetComponent<PlayerStats>();
     }
+
     void Update(){
         var inputMovement = new Vector3(Input.GetAxisRaw("Horizontal"),0 , Input.GetAxisRaw("Vertical")).normalized;
         var inputJump = Input.GetAxis("Jump");
@@ -43,6 +45,11 @@ public class PlayerInput : MonoBehaviour{
             transform.localScale = new Vector3(1,1,1);
         }
         coyoteTimer -= Time.deltaTime;
+
+        var forceNextLevel = Input.GetKey(KeyCode.L);
+        if (forceNextLevel) {
+            GameManager.Instance.PlayerWon();
+        }
     }
     private void RotatePlayerToMoveDirection( ){
         var input = new Vector3(Input.GetAxis("Horizontal"),0 , Input.GetAxis("Vertical")).normalized;
