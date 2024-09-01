@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80a2d28dfc248b49a2b56e41d9a2409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 1000
   _splashVfx: {fileID: 4474974730979295446, guid: 774662912867c8e4da03c858414bcd30,
     type: 3}
   _deathVfx: {fileID: 2800034577349417615, guid: 007ec6ac0115f254789f3617ac93b569,

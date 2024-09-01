@@ -18,7 +18,7 @@ public class BossHP : MonoBehaviour, IHealth{
     }
     private IEnumerator DeathKerfus(){
         enabled = false;
-        GetComponent<StateMachineManager>().ChangeState(States.Death);
+        GetComponent<StateMachineManager>().ChangeState(States.Death, true);
         var anim = GetComponent<Animator>();
         yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[5].length + anim.runtimeAnimatorController.animationClips[6].length);
         GameManager.Instance.ConditionCalled();
