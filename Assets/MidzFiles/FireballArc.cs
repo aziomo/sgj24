@@ -21,6 +21,8 @@ public class MoveInArc : MonoBehaviour
 
     public GameObject particlePrefab;
 
+    private Collider objectCollider;
+
     void Start()
     {
         startPos = startPoint.position;
@@ -38,6 +40,8 @@ public class MoveInArc : MonoBehaviour
                 interactables.Add(interactable);
             }
         }
+
+        objectCollider = GetComponent<Collider>();
 
     }
 
@@ -62,6 +66,7 @@ public class MoveInArc : MonoBehaviour
             transform.position = startPos;
             elapsedTime = 0f;
             objectRenderer.enabled = true;
+            objectCollider.enabled = true;
             //enabled = false;
         }
     }
@@ -81,11 +86,15 @@ public class MoveInArc : MonoBehaviour
             // Disable the collider to turn off collision
             foreach (IHealth interactable in interactables)
             {
+                objectCollider.enabled = false;
                 interactable.TakeDamage(20);
             }
 
             // Make the object invisible by disabling the MeshRenderer
             MeshRenderer objectRenderer = GetComponent<MeshRenderer>();
+
+            
+
             if (objectRenderer != null)
             {
                 objectRenderer.enabled = false;
