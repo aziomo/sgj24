@@ -135,6 +135,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6095891302673247436, guid: 8b714871c9338034cbec545fc9dae4b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8119159224832298772, guid: 8b714871c9338034cbec545fc9dae4b6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -206,6 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 82433686}
   - component: {fileID: 82433685}
+  - component: {fileID: 82433687}
   m_Layer: 0
   m_Name: Triggerer
   m_TagString: Untagged
@@ -249,6 +255,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &82433687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82433684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0ea6c5a6b2959408778d29cd142ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &98429440
 MeshCollider:
   m_ObjectHideFlags: 0
