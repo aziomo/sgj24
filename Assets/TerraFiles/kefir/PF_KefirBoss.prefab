@@ -196,3 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
+  _splashVfx: {fileID: 4474974730979295446, guid: 774662912867c8e4da03c858414bcd30,
+    type: 3}
+  _deathVfx: {fileID: 2800034577349417615, guid: 007ec6ac0115f254789f3617ac93b569,
+    type: 3}

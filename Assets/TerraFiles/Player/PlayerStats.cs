@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour,IHealth{
     public float jumpForce = 2;
     public float health = 100;
     public float rotationSpeed = 40;
+    [SerializeField] private GameObject _bloodVfx;
     private void Awake(){
         instance = this;
     }
@@ -16,6 +17,10 @@ public class PlayerStats : MonoBehaviour,IHealth{
         health -= damage;
         if(health <= 0){
             GameManager.Instance.ResetLevel();
+        }
+        else
+        {
+            Instantiate(_bloodVfx, transform.position, Quaternion.identity);
         }
     }
     public void TakeHeal(float heal){
