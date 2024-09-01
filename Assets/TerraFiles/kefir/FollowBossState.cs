@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class FollowBossState : State{
     private Transform target;
     public ParticleSystem jumpParticle;
+    public AudioClip hitGround;
     private float timer = 0;
     private float yPosition = 0;
     private void Start(){
@@ -25,6 +26,7 @@ public class FollowBossState : State{
         yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[1].length- .3f);
         jumpParticle.Play();
         UltimateCamera.instance.StartCameraShake(.6f, 50);
+        AudioSource.PlayClipAtPoint(hitGround, transform.position);
         yield return new WaitForSeconds(.3f);
         timer -= anim.runtimeAnimatorController.animationClips[1].length;
         if(timer > 0){

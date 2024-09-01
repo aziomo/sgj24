@@ -15,6 +15,7 @@ public class PlayerInput : MonoBehaviour{
     private float coyoteTimer = 0;
     private bool groundMemo = false;
     private bool wasCrouching = false;
+    private float lastJumpSoundTime = 0;
     private void Awake(){
         states = GetComponent<StateMachineManager>();
         groundCheck = GetComponent<GroundCheck>();
@@ -37,7 +38,10 @@ public class PlayerInput : MonoBehaviour{
         }
       
         if(inputJump > 0 && (groundCheck.CheckIfOnGround() || coyoteTimer > 0)){
-            AudioSource.PlayClipAtPoint(jump, transform.position);
+            if (lastJumpSoundTime < Time.fixedTime + 0.5f) {
+                AudioSource.PlayClipAtPoint(jump, transform.position);
+                lastJumpSoundTime = Time.fixedTime;
+            }
             states.ChangeState(States.Jump);
             groundMemo = false;
         }else{

@@ -5711,6 +5711,7 @@ MonoBehaviour:
   anim: {fileID: 2224882882821471133}
   grabWeapont: 0
   _trailVfx: {fileID: 7123199130118448999}
+  attack: {fileID: 8300000, guid: e84333fffa515464cad494832287f6cb, type: 3}
 --- !u!114 &7340286222273507158
 MonoBehaviour:
   m_ObjectHideFlags: 0
