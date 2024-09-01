@@ -18,6 +18,7 @@ public class BossHP : MonoBehaviour, IHealth{
             Instantiate(_splashVfx, Sausage.Active.transform.position, Quaternion.identity);
         }
     }
+    public void TakeKnockBack(float force ,Vector3 dir){}
     public void TakeHeal(float heal){}
 
 }

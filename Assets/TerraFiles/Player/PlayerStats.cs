@@ -18,10 +18,12 @@ public class PlayerStats : MonoBehaviour,IHealth{
         if(health <= 0){
             GameManager.Instance.ResetLevel();
         }
-        else
-        {
+        else{
             Instantiate(_bloodVfx, transform.position, Quaternion.identity);
         }
+    }
+    public void TakeKnockBack(float force ,Vector3 dir){
+        GetComponent<Rigidbody>().velocity = dir*force;
     }
     public void TakeHeal(float heal){
         health += heal;
