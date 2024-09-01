@@ -5280,6 +5280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crouch: {fileID: 8300000, guid: 1812a8a50d9242946a1eea2464ebbaec, type: 3}
   stand: {fileID: 8300000, guid: e84333fffa515464cad494832287f6cb, type: 3}
+  jump: {fileID: 8300000, guid: 73c7cf571495bb6419370c6bc2f84a52, type: 3}
   addTimeCoyote: 0.5
 --- !u!114 &5525134995677700563
 MonoBehaviour:

@@ -7,7 +7,7 @@ public class DisableSpawnerOnTrigger : MonoBehaviour
     [SerializeField] private GameObject spawner;
 
     private void OnTriggerEnter(Collider other) {
-        spawner.SetActive(false);
+        Destroy(spawner);
         gameObject.SetActive(false);
     }
 }

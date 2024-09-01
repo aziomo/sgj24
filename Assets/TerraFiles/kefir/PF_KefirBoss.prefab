@@ -110,6 +110,26 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5558833069298454136, guid: 26e498e22174a654ea6b1a268fb79070,
+        type: 3}
+      propertyPath: attackList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558833069298454136, guid: 26e498e22174a654ea6b1a268fb79070,
+        type: 3}
+      propertyPath: attackList.Array.data[0]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558833069298454136, guid: 26e498e22174a654ea6b1a268fb79070,
+        type: 3}
+      propertyPath: attackList.Array.data[3]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558833069298454136, guid: 26e498e22174a654ea6b1a268fb79070,
+        type: 3}
+      propertyPath: attackList.Array.data[4]
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -203,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80a2d28dfc248b49a2b56e41d9a2409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 1000
   _splashVfx: {fileID: 4474974730979295446, guid: 774662912867c8e4da03c858414bcd30,
     type: 3}
   _deathVfx: {fileID: 2800034577349417615, guid: 007ec6ac0115f254789f3617ac93b569,
