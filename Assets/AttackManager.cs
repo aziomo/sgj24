@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class AttackManager : MonoBehaviour{
     public float damage = 10;
@@ -9,6 +10,7 @@ public class AttackManager : MonoBehaviour{
     private float attackCooldown = 0;
     private float damageCooldown = 0;
     public bool grabWeapont = false;
+    [SerializeField] private VisualEffect _trailVfx;
     private void Start(){
         if(grabWeapont){
             anim.Play(anim.runtimeAnimatorController.animationClips[1].name);
@@ -41,5 +43,8 @@ public class AttackManager : MonoBehaviour{
     private void Attack(int whichAnimation){
         attackCooldown = anim.runtimeAnimatorController.animationClips[whichAnimation].length;
         anim.Play(anim.runtimeAnimatorController.animationClips[whichAnimation].name);
+        
+        _trailVfx.SetFloat("Duration", attackCooldown);
+        _trailVfx.SendEvent("Spawn");
     }
 }
