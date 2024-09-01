@@ -15,7 +15,8 @@ public class TeslaFactory : MonoBehaviour
 
     private Vector2 _currentSpawnDelay;
     private float _nextSpawn;
-
+    public AudioClip[] whoosh;
+   
     private void OnEnable()
     {
         _currentSpawnDelay = _spawnDelay;
@@ -31,7 +32,7 @@ public class TeslaFactory : MonoBehaviour
         {
             var newbie = Instantiate(_prefab);
             newbie.transform.position += Vector3.right * Mathf.Lerp(_laneRange.x, _laneRange.y, Random.Range(0, _lanes) / (_lanes - 1f));
-
+            AudioSource.PlayClipAtPoint(whoosh[Mathf.FloorToInt(Random.Range(0, whoosh.Length - 0.001f))], newbie.transform.position + Vector3.back * 280);
             _nextSpawn = Time.time + Random.Range(_currentSpawnDelay.x, _currentSpawnDelay.y);
         }
     }
