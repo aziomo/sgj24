@@ -38,7 +38,7 @@ public class PlayerInput : MonoBehaviour{
         }
       
         if(inputJump > 0 && (groundCheck.CheckIfOnGround() || coyoteTimer > 0)){
-            if (lastJumpSoundTime < Time.fixedTime + 0.5f) {
+            if (lastJumpSoundTime + 0.5f < Time.fixedTime) {
                 AudioSource.PlayClipAtPoint(jump, transform.position);
                 lastJumpSoundTime = Time.fixedTime;
             }
