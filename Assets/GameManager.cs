@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour{
     [SerializeField] private Text _winTex;
     [SerializeField] private GameObject _winScreen;
     [SerializeField] private GameObject _deathScreen;
+    private bool _waitingForSceneLoad;
     void Awake()
     {
         levelWinConditionCurrent = levelWinCondition[0];
@@ -23,13 +24,18 @@ public class GameManager : MonoBehaviour{
     private void OnLevelWasLoaded (int level) {
         mapEnd = false;
     }
-    public void ResetLevel(){
+    public void ResetLevel()
+    {
+        if (_waitingForSceneLoad)
+            return;
         //SceneManager.LoadScene(level);
         _deathScreen.SetActive(true);
         StartCoroutine(DelayedSceneLoad(level, level == 1));
         //Destroy(this);
     }
     public void ConditionCalled(){
+        if (_waitingForSceneLoad)
+            return;
         if(mapEnd) return;
         levelWinConditionCurrent -= 1;
         if(0 == levelWinConditionCurrent){
@@ -37,6 +43,8 @@ public class GameManager : MonoBehaviour{
         }
     }
     public void PlayerWon(){
+        if (_waitingForSceneLoad)
+            return;
         mapEnd = true;
         _winTex.text = _winMessages[level];
         level++;
@@ -54,6 +62,8 @@ public class GameManager : MonoBehaviour{
 
     IEnumerator DelayedSceneLoad(int level, bool destroy)
     {
+        _waitingForSceneLoad = true;
+        
         yield return new WaitForSeconds(6f);
         SceneManager.LoadScene(level);
         
@@ -64,5 +74,7 @@ public class GameManager : MonoBehaviour{
         
         if(destroy)
             Destroy(this);
+        
+        _waitingForSceneLoad = false;
     }
 }
