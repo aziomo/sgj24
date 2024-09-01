@@ -5138,6 +5138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAction: 0
   fallParticle: {fileID: 7869078373764773505}
+  atckPosition: {fileID: 0}
+  speed: 6
 --- !u!4 &607504800011584901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 661c578adcc16994c9c1efb42668c88b,

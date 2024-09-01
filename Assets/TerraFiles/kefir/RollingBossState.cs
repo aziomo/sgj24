@@ -5,11 +5,22 @@ using UnityEngine;
 
 public class RollingBossState : State{
     public ParticleSystem fallParticle;
+    public Transform atckPosition;
+    public float speed = 1;
+    private bool calledEndAttacck = false;
     public override void StartState(){
         fallParticle.Stop();
-        StartCoroutine(IDK());
     }
-    public override void UpdateState(){}
+    public override void UpdateState(){
+        if(Vector3.Distance(atckPosition.position, transform.position) > 5f){
+            transform.parent.position = Vector3.MoveTowards(transform.parent.position, 
+                new Vector3(atckPosition.position.x, transform.position.y, atckPosition.position.z), 
+            speed * Time.deltaTime);
+        }else if(!calledEndAttacck){
+            calledEndAttacck = true;
+            StartCoroutine(IDK());
+        }
+    }
     private IEnumerator IDK(){
         anim.Play("FallKefir");
         yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[2].length);
