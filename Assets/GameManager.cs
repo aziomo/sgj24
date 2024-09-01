@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour{
         _waitingForSceneLoad = true;
         
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene(level - 1);
         
         _winScreen.SetActive(false);
         _deathScreen.SetActive(false);
