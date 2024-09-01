@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Callbacks;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class FollowBossState : State{
     private Transform target;
     public ParticleSystem jumpParticle;
-    public float speed = 1;
     private float timer = 0;
     private float yPosition = 0;
     private void Start(){
@@ -37,7 +37,7 @@ public class FollowBossState : State{
     }
     public override void UpdateState(){ 
         var targetPosition = new Vector3(target.position.x,yPosition, target.position.z);
-        transform.parent.position = Vector3.MoveTowards(transform.parent.position, targetPosition, speed * Time.deltaTime);
+        transform.parent.GetComponent<NavMeshAgent>().SetDestination(targetPosition);
     }
     public override void EndState(){}
 }
