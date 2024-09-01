@@ -43,5 +43,6 @@ public enum States{
     BossIdle,
     BossJumpAttack,
     BossRolling,
-    BossFollow
+    BossFollow,
+    Death
 }

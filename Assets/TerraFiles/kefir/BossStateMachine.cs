@@ -9,6 +9,7 @@ public class BossStateMachine : StateMachineManager{
             States.BossJumpAttack => states[1],
             States.BossRolling => states[2],
             States.BossFollow => states[3],
+            States.Death => states[4],
             _ => states[0],
         };
     }
