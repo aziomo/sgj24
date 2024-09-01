@@ -10,9 +10,12 @@ public class FollowBossState : State{
     public AudioClip hitGround;
     private float timer = 0;
     private float yPosition = 0;
+    private Camera camera;
     private void Start(){
         yPosition = transform.position.y;
+        camera = GameObject.FindFirstObjectByType<Camera>();
     }
+
     public override void StartState(){
         target = PlayerStats.instance.transform;
         jumpParticle.Stop();
@@ -26,7 +29,7 @@ public class FollowBossState : State{
         yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[1].length- .3f);
         jumpParticle.Play();
         UltimateCamera.instance.StartCameraShake(.6f, 50);
-        AudioSource.PlayClipAtPoint(hitGround, transform.position);
+        AudioSource.PlayClipAtPoint(hitGround, camera.transform.position, 0.3f);
         yield return new WaitForSeconds(.3f);
         timer -= anim.runtimeAnimatorController.animationClips[1].length;
         if(timer > 0){
