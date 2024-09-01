@@ -16,7 +16,7 @@ public class AttackManager : MonoBehaviour{
     public void DetectedEnemy(IHealth enemy){
         if(damageCooldown <= 0){
             enemy.TakeDamage(damage);
-            damageCooldown = .1f;
+            // damageCooldown = .1f;
         }
     }
     void Update(){
