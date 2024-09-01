@@ -52,13 +52,13 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 0.2
+      - m_Value: 0.75
         m_Name: Size
         m_Overridden: 1
-      - m_Value: -9
+      - m_Value: -15
         m_Name: Gravity
         m_Overridden: 1
-      - m_Value: 16
+      - m_Value: 29
         m_Name: Velocity
         m_Overridden: 1
     m_Vector2f:
