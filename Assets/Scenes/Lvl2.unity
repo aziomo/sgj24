@@ -871,31 +871,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 228920856}
-  - component: {fileID: 228920855}
   m_Layer: 0
-  m_Name: MobSpawner (1)
+  m_Name: MobSpawnerTemp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &228920855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228920854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df1cc251b615f054786040d17b6d5853, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnedMob: {fileID: 7387554138256604416, guid: 0f9fdf44b07e98e48b8df6bbab50be0d,
-    type: 3}
-  player: {fileID: 1285383055}
-  spawnFreq: 0.16
-  maxEnemiesCount: 10
 --- !u!4 &228920856
 Transform:
   m_ObjectHideFlags: 0
@@ -905,11 +887,11 @@ Transform:
   m_GameObject: {fileID: 228920854}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.28, y: 1.28, z: 32.24}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1912390345}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &245614722
 GameObject:
@@ -920,7 +902,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 245614724}
-  - component: {fileID: 245614723}
   m_Layer: 0
   m_Name: MobSpawner
   m_TagString: Untagged
@@ -928,23 +909,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &245614723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245614722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df1cc251b615f054786040d17b6d5853, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnedMob: {fileID: 7387554138256604416, guid: 0f9fdf44b07e98e48b8df6bbab50be0d,
-    type: 3}
-  player: {fileID: 1285383055}
-  spawnFreq: 0.16
-  maxEnemiesCount: 10
 --- !u!4 &245614724
 Transform:
   m_ObjectHideFlags: 0
@@ -954,11 +918,11 @@ Transform:
   m_GameObject: {fileID: 245614722}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.91, y: 1.28, z: 44.820004}
+  m_LocalPosition: {x: -33.19, y: 0, z: 12.580002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1912390345}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &260115590 stripped
 GameObject:
@@ -5859,6 +5823,57 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898303009}
   m_Mesh: {fileID: 2118867425003597445, guid: 9b04f0f872b419240bcf6dcfa834df83, type: 3}
+--- !u!1 &1912390344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1912390345}
+  - component: {fileID: 1912390346}
+  m_Layer: 0
+  m_Name: EnemyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1912390345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912390344}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.28, y: 1.28, z: 32.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 245614724}
+  - {fileID: 228920856}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1912390346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912390344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1cc251b615f054786040d17b6d5853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnedMob: {fileID: 7387554138256604416, guid: 0f9fdf44b07e98e48b8df6bbab50be0d,
+    type: 3}
+  player: {fileID: 1285383055}
+  spawnFreq: 0.16
+  maxEnemiesCount: 100
 --- !u!1 &1923954722
 GameObject:
   m_ObjectHideFlags: 0
@@ -8793,8 +8808,7 @@ SceneRoots:
   - {fileID: 1333455505}
   - {fileID: 1768996294}
   - {fileID: 7508795908452060731}
-  - {fileID: 245614724}
-  - {fileID: 228920856}
+  - {fileID: 1912390345}
   - {fileID: 1924684680}
   - {fileID: 780156706}
   - {fileID: 550015081}
