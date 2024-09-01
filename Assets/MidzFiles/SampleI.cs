@@ -23,6 +23,8 @@ public class SampleI : MonoBehaviour, IInteract
 
     public float scale1 = 1f;
 
+    [SerializeField] private GameObject _explosionVfx;
+    
     private OgreCowController Cow;
 
     void Start()
@@ -59,6 +61,8 @@ public class SampleI : MonoBehaviour, IInteract
             elapsedTime3 += Time.deltaTime;
             yield return null;
         }
+
+        Instantiate(_explosionVfx, transform.position, Quaternion.identity);
         GameManager.Instance.ConditionCalled();
         Destroy(gameObject);
     }
