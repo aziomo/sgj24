@@ -9,4 +9,5 @@ public interface IHealth{
 
 public interface IInteract{
     public void Interact();
+    public GameObject GetObjectReference();
 }

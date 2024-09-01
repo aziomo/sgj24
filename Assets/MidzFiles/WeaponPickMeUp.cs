@@ -22,20 +22,13 @@ public class WeaponPickMeUp : MonoBehaviour, IInteract
         }
     }
 
-    public void Interact()
-    {
-
-        if (distanceToPlayer < 4 & angle < 45)
-        {
-
-
-
-            Debug.Log("Ok");
-
-            attackManager = player.GetComponent<AttackManager>();
-            attackManager.GrabWeapont();
-        }
-
+    public void Interact(){
+        attackManager = player.GetComponent<AttackManager>();
+        attackManager.GrabWeapont();
+        Destroy(gameObject);
+    }
+    public GameObject GetObjectReference(){
+        return gameObject;
     }
 
 

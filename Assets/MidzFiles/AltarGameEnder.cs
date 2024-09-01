@@ -35,7 +35,9 @@ public class AltarGameEnder : MonoBehaviour, IInteract{
             Debug.LogError("PlayerStats singleton instance not found!");
         }
     }
-
+    public GameObject GetObjectReference(){
+        return gameObject;
+    }
     public void Interact()
     {
 
