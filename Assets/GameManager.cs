@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour{
             PlayerWon();
         }
     }
-    private void PlayerWon(){
+    public void PlayerWon(){
         mapEnd = true;
         _winTex.text = _winMessages[level];
         level++;
