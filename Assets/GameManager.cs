@@ -28,9 +28,16 @@ public class GameManager : MonoBehaviour{
     {
         if (_waitingForSceneLoad)
             return;
+
+        PlayerStats.instance.gameObject.GetComponent<StateMachineManager>().enabled = false;
+        PlayerStats.instance.gameObject.GetComponent<PlayerInput>().enabled = false;
+        var angles = PlayerStats.instance.transform.localEulerAngles;
+        angles.x = 90f;
+        PlayerStats.instance.transform.localEulerAngles = angles;
+        
         //SceneManager.LoadScene(level);
         _deathScreen.SetActive(true);
-        StartCoroutine(DelayedSceneLoad(level, level == 1));
+        StartCoroutine(DelayedSceneLoad(level, 3f, level == 1));
         //Destroy(this);
     }
     public void ConditionCalled(){
@@ -54,17 +61,17 @@ public class GameManager : MonoBehaviour{
         }
         //SceneManager.LoadScene(level);
         _winScreen.SetActive(true);
-        StartCoroutine(DelayedSceneLoad(level, false));
+        StartCoroutine(DelayedSceneLoad(level, 6f, false));
     }
     private void Won(){
         Debug.Log("won");
     }
 
-    IEnumerator DelayedSceneLoad(int level, bool destroy)
+    IEnumerator DelayedSceneLoad(int level, float delay, bool destroy)
     {
         _waitingForSceneLoad = true;
         
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(level);
         
         _winScreen.SetActive(false);
