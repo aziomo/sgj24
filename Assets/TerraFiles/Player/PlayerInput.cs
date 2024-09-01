@@ -9,6 +9,7 @@ public class PlayerInput : MonoBehaviour{
 
     public AudioClip crouch;
     public AudioClip stand;
+    public AudioClip jump;
 
     public float addTimeCoyote = .5f;
     private float coyoteTimer = 0;
@@ -36,6 +37,7 @@ public class PlayerInput : MonoBehaviour{
         }
       
         if(inputJump > 0 && (groundCheck.CheckIfOnGround() || coyoteTimer > 0)){
+            AudioSource.PlayClipAtPoint(jump, transform.position);
             states.ChangeState(States.Jump);
             groundMemo = false;
         }else{
