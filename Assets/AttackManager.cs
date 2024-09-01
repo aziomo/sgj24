@@ -11,6 +11,8 @@ public class AttackManager : MonoBehaviour{
     private float damageCooldown = 0;
     public bool grabWeapont = false;
     [SerializeField] private VisualEffect _trailVfx;
+
+    public AudioClip attack;
     private void Start(){
         if(grabWeapont){
             anim.Play(anim.runtimeAnimatorController.animationClips[1].name);
@@ -33,6 +35,7 @@ public class AttackManager : MonoBehaviour{
     void Update(){
         if(!grabWeapont) return;
         if(Input.GetKeyDown(KeyCode.Mouse0) && attackCooldown <= 0){
+            AudioSource.PlayClipAtPoint(attack, transform.position);
             if(comboTimer > 0){
                 Attack(3);
             }else{
