@@ -21,7 +21,7 @@ public class SampleI : MonoBehaviour, IInteract
 
     public Vector3 offset = new Vector3(1,1,1);
 
-
+    public float scale1 = 1f;
 
     private OgreCowController Cow;
 
@@ -71,7 +71,7 @@ public class SampleI : MonoBehaviour, IInteract
             Interact();
         }
         */
-        if(displaylock) return;
+        //if(displaylock) return;
 
 
 
@@ -115,7 +115,7 @@ public class SampleI : MonoBehaviour, IInteract
             }
 
             spriteObject.transform.position = transform.position + offset;
-
+            spriteObject.transform.localScale = new Vector3(scale1, scale1, scale1);
 
 
         }
