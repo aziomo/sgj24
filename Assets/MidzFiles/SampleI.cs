@@ -67,22 +67,17 @@ public class SampleI : MonoBehaviour, IInteract
     }
 
 
-    private IEnumerator Explode()
-    {
-        
-
+    private IEnumerator Explode(){
+        Debug.Log("ez");
         float elapsedTime3 = 0f;
-
-        while (elapsedTime3 < 2)
-        {
-
-            transform.localScale += Vector3.one * 1f * Time.deltaTime;
-            // Increment the elapsed time
+        while (elapsedTime3 < 2){
+            transform.localScale += Vector3.one * Time.deltaTime;
             elapsedTime3 += Time.deltaTime;
-
-            // Wait until the next frame
             yield return null;
         }
+        GameManager.Instance.ConditionCalled();
+        Debug.Log("chuj 2");
+        TestingInteract.instance.interactables.Remove(this);
         Destroy(gameObject);
     }
 
@@ -94,6 +89,7 @@ public class SampleI : MonoBehaviour, IInteract
             Interact();
         }
         */
+        if(displaylock) return;
 
 
 

@@ -1968,6 +1968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f133b48df88084fa904ce162bfa851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactables: []
 --- !u!65 &135481843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28464,7 +28465,7 @@ PrefabInstance:
     - target: {fileID: 5698469263723817350, guid: fed7625babaa77849b2d2210f4f76855,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2182
+      value: 2203
       objectReference: {fileID: 0}
     - target: {fileID: 7100919346879845045, guid: fed7625babaa77849b2d2210f4f76855,
         type: 3}
@@ -28567,7 +28568,7 @@ PrefabInstance:
     - target: {fileID: 5698469263723817350, guid: fed7625babaa77849b2d2210f4f76855,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2200
+      value: 2221
       objectReference: {fileID: 0}
     - target: {fileID: 6037389347172952603, guid: fed7625babaa77849b2d2210f4f76855,
         type: 3}

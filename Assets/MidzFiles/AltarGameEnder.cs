@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AltarGameEnder : MonoBehaviour, IInteract
-{
+public class AltarGameEnder : MonoBehaviour, IInteract{
     private Transform player;
     public Sprite placeholderSprite;
     public float heightOffset = 1f;
@@ -46,7 +45,7 @@ public class AltarGameEnder : MonoBehaviour, IInteract
 
             if (explode == true)
             {
-                StartCoroutine(Explode());///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                StartCoroutine(Explode());
                 displaylock = true;
             }
 
@@ -59,23 +58,9 @@ public class AltarGameEnder : MonoBehaviour, IInteract
     }
 
 
-    private IEnumerator Explode()
-    {
-
-
-        float elapsedTime3 = 0f;
-
-        while (elapsedTime3 < 2)
-        {
-
-            transform.localScale += Vector3.one * 1f * Time.deltaTime;
-            // Increment the elapsed time
-            elapsedTime3 += Time.deltaTime;
-
-            // Wait until the next frame
-            yield return null;
-        }
-        Destroy(gameObject);
+    private IEnumerator Explode(){
+        yield return new WaitForSeconds(2f);
+        GameManager.Instance.ConditionCalled();
     }
 
     void Update()
