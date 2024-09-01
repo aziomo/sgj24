@@ -62,7 +62,7 @@ public class SampleI : MonoBehaviour, IInteract
             yield return null;
         }
 
-        Instantiate(_explosionVfx, transform.position, Quaternion.identity);
+        Instantiate(_explosionVfx, transform.position, Quaternion.Euler(-90f, 0f, 0f));
         GameManager.Instance.ConditionCalled();
         Destroy(gameObject);
     }

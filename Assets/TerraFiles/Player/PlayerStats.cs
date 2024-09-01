@@ -22,7 +22,7 @@ public class PlayerStats : MonoBehaviour,IHealth{
             GameManager.Instance.ResetLevel();
         }
         else{
-            Instantiate(_bloodVfx, transform.position, Quaternion.identity);
+            Instantiate(_bloodVfx, transform.position, Quaternion.Euler(-90f, 0f, 0f));
         }
     }
     public void TakeKnockBack(float force ,Vector3 dir){

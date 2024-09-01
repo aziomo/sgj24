@@ -22,6 +22,7 @@ public class SpawnMobs : MonoBehaviour
     void Start()
     {
         nextSpawnIn = spawnFreq;
+        
     }
 
 
