@@ -61,7 +61,7 @@ public class AltarGameEnder : MonoBehaviour, IInteract{
 
 
     private IEnumerator Explode(){
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.1f);
         GameManager.Instance.ConditionCalled();
     }
 
