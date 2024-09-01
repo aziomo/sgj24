@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 6601040360360657343}
   - component: {fileID: 6770430036642043588}
   - component: {fileID: 1756610378231539002}
-  - component: {fileID: 7862618374122835004}
+  - component: {fileID: 6804000615261235346}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Untagged
@@ -627,7 +627,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &7862618374122835004
+--- !u!114 &6804000615261235346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7387554138256604416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07904f6f60ecf3e49b0642f15fb797ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 52ffcbcb02d503f41a2f8f802343424e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1

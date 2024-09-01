@@ -20,11 +20,10 @@ public class Enemy : MonoBehaviour, IHealth
         health -= (int)x;
         if (health < 0) {
             gameObject.GetComponent<WalkerController>().isDying = true;
-            SpawnMobs.enemiesCount--;
             Destroy(gameObject, 3f);
         }
     }
-
+    public void TakeKnockBack(float force ,Vector3 dir){}
     public void TakeHeal(float x) {
         health += (int)x;
     }
