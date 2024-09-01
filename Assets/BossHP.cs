@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossHP : MonoBehaviour, IHealth{
     public float hp = 100;
     [SerializeField] private GameObject _splashVfx;
     [SerializeField] private GameObject _deathVfx;
+    public Slider hpBAR;
     public void TakeDamage(float damage){
         hp -= damage;
+        hpBAR.value = hp /1000;
         if(hp <= 0){
             StartCoroutine(DeathKerfus());
         }

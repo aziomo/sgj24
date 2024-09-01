@@ -166,7 +166,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 1
+  m_VoxelSize: 1.5033334
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: ac33783a2d5e4b24487f67ac121be4c6, type: 2}
   m_BuildHeightMesh: 0
@@ -3782,6 +3782,16 @@ PrefabInstance:
       propertyPath: timeBetweenAttacksMin
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6601610901609201542, guid: 74c2f36ddf4ca6f468af63d1fce2272b,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601610901609201542, guid: 74c2f36ddf4ca6f468af63d1fce2272b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6704819189159287148, guid: 74c2f36ddf4ca6f468af63d1fce2272b,
         type: 3}
       propertyPath: m_Size.y
@@ -4818,6 +4828,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280295522615671577, guid: 8b714871c9338034cbec545fc9dae4b6,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280295522615671577, guid: 8b714871c9338034cbec545fc9dae4b6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8119159224832298772, guid: 8b714871c9338034cbec545fc9dae4b6,
         type: 3}
