@@ -110,6 +110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0968f4120b47c714c98ea780d4350994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crouch: {fileID: 8300000, guid: 1812a8a50d9242946a1eea2464ebbaec, type: 3}
+  stand: {fileID: 8300000, guid: e84333fffa515464cad494832287f6cb, type: 3}
+  jump: {fileID: 8300000, guid: 73c7cf571495bb6419370c6bc2f84a52, type: 3}
   addTimeCoyote: 0.5
 --- !u!114 &2169981713021195598
 MonoBehaviour:
@@ -128,6 +131,7 @@ MonoBehaviour:
   jumpForce: 30
   health: 100
   rotationSpeed: 40
+  _bloodVfx: {fileID: 0}
 --- !u!114 &5103035301666852862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5198,6 +5202,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459415388279213572, guid: 2fb6450e29d29b540bc3200b133ae339,
         type: 3}
+      propertyPath: moo
+      value: 
+      objectReference: {fileID: 8300000, guid: b073042cde7fd9f49a8a4c2199e7e279, type: 3}
+    - target: {fileID: 4459415388279213572, guid: 2fb6450e29d29b540bc3200b133ae339,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 2634579904705808815}
@@ -5209,7 +5218,7 @@ PrefabInstance:
     - target: {fileID: 6265959360951276281, guid: 2fb6450e29d29b540bc3200b133ae339,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2182
+      value: 2185
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
