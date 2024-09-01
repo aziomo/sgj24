@@ -14,6 +14,9 @@ public class PlayerStats : MonoBehaviour,IHealth{
     }
     public void TakeDamage(float damage){
         health -= damage;
+        if(health <= 0){
+            GameManager.Instance.ResetLevel();
+        }
     }
     public void TakeHeal(float heal){
         health += heal;

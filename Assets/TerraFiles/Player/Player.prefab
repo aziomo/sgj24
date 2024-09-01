@@ -5176,6 +5176,8 @@ GameObject:
   - component: {fileID: 7340286222273507158}
   - component: {fileID: 2730798143315720537}
   - component: {fileID: 2402481495086692114}
+  - component: {fileID: 461606112986709485}
+  - component: {fileID: 2408629691384982984}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5357,6 +5359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAction: 0
+  stateTime: 1
 --- !u!114 &2137090986766583870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5458,6 +5461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f133b48df88084fa904ce162bfa851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactables: []
 --- !u!135 &2402481495086692114
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5479,6 +5483,41 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.56
   m_Center: {x: 0, y: 0.44, z: 0}
+--- !u!136 &461606112986709485
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6095891302673247436}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.15
+  m_Height: 2.82
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.13, z: 0}
+--- !u!114 &2408629691384982984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6095891302673247436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748180932be13ab43a5fc022c5cc5689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8419229219455378642
 GameObject:
   m_ObjectHideFlags: 0

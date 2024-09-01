@@ -29,6 +29,8 @@ public class Level6CC : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = false;
         GetComponent<Rigidbody>().velocity = _deathback;
 
+        GameManager.Instance.ResetLevel();
+
         enabled = false;
     }
 }

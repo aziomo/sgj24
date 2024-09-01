@@ -37,7 +37,9 @@ public class StartCutscene : MonoBehaviour, IInteract
         }
 
     }
-
+      public GameObject GetObjectReference(){
+        return gameObject;
+    }
     public void Interact()
     {
 

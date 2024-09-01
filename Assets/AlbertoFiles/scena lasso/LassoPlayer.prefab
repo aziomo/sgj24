@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 4932108104333816022}
   - component: {fileID: 13563804577643870}
   - component: {fileID: 1149099070358526060}
+  - component: {fileID: 7810355978094023498}
   m_Layer: 0
   m_Name: LassoPlayer
   m_TagString: Untagged
@@ -109,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0968f4120b47c714c98ea780d4350994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addTimeCoyote: 0.5
 --- !u!114 &2169981713021195598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 5673067783634847497}
-  distance: 0.1
+  radius: 0.1
   ground:
     serializedVersion: 2
     m_Bits: 8
@@ -203,6 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAction: 0
+  stateTime: 1
 --- !u!114 &3059452897664672574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +265,18 @@ MonoBehaviour:
   speed: 20
   cowOnLasso: 0
   caughtCow: {fileID: 0}
+--- !u!114 &7810355978094023498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2634579904705808815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748180932be13ab43a5fc022c5cc5689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3173208586558860561
 GameObject:
   m_ObjectHideFlags: 0
@@ -5190,6 +5205,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lasso
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265959360951276281, guid: 2fb6450e29d29b540bc3200b133ae339,
+        type: 3}
+      propertyPath: m_VersionIndex
+      value: 2182
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

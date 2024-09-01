@@ -19,9 +19,6 @@ public class SampleI : MonoBehaviour, IInteract
 
     private bool displaylock = false;
 
-
-    public bool explode = true;
-
     public Vector3 offset = new Vector3(1,1,1);
 
 
@@ -44,45 +41,25 @@ public class SampleI : MonoBehaviour, IInteract
 
 
     }
-
-    public void Interact()
-    {
-
-        if (distanceToPlayer < detectionRange & angle < 45 & Cow.isCaught)
-        {
-
-
-            if (explode == true)
-            {
-                StartCoroutine(Explode());
-                displaylock = true;
-            }
-
-
-
-
-
+    public GameObject GetObjectReference(){
+        return gameObject;
+    }
+    public void Interact(){
+        if (Cow.isCaught && !displaylock){
+            StartCoroutine(Explode());
+            displaylock = true;
         }
-
     }
 
 
-    private IEnumerator Explode()
-    {
-        
-
+    private IEnumerator Explode(){
         float elapsedTime3 = 0f;
-
-        while (elapsedTime3 < 2)
-        {
-
-            transform.localScale += Vector3.one * 1f * Time.deltaTime;
-            // Increment the elapsed time
+        while (elapsedTime3 < 2){
+            transform.localScale += Vector3.one * Time.deltaTime;
             elapsedTime3 += Time.deltaTime;
-
-            // Wait until the next frame
             yield return null;
         }
+        GameManager.Instance.ConditionCalled();
         Destroy(gameObject);
     }
 
@@ -94,6 +71,7 @@ public class SampleI : MonoBehaviour, IInteract
             Interact();
         }
         */
+        if(displaylock) return;
 
 
 
