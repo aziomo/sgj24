@@ -5600,7 +5600,12 @@ PrefabInstance:
         type: 3}
       propertyPath: _player
       value: 
-      objectReference: {fileID: 8119159223896701446}
+      objectReference: {fileID: 1211295827732099638}
+    - target: {fileID: 6058363292548331978, guid: 939ef72934325be4f87a355c093170eb,
+        type: 3}
+      propertyPath: _movementStability.m_Curve.Array.data[1].value
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7203269221524405012, guid: 939ef72934325be4f87a355c093170eb,
         type: 3}
       propertyPath: scale1
@@ -8962,7 +8967,12 @@ PrefabInstance:
         type: 3}
       propertyPath: _player
       value: 
-      objectReference: {fileID: 8119159223896701446}
+      objectReference: {fileID: 1211295827732099638}
+    - target: {fileID: 6058363292548331978, guid: 939ef72934325be4f87a355c093170eb,
+        type: 3}
+      propertyPath: _movementStability.m_Curve.Array.data[1].value
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7203269221524405012, guid: 939ef72934325be4f87a355c093170eb,
         type: 3}
       propertyPath: scale1
@@ -20692,7 +20702,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _player
       value: 
-      objectReference: {fileID: 8119159223896701446}
+      objectReference: {fileID: 1211295827732099638}
     - target: {fileID: 7203269221524405012, guid: 939ef72934325be4f87a355c093170eb,
         type: 3}
       propertyPath: scale1
@@ -21661,7 +21671,12 @@ PrefabInstance:
         type: 3}
       propertyPath: _player
       value: 
-      objectReference: {fileID: 8119159223896701446}
+      objectReference: {fileID: 1211295827732099638}
+    - target: {fileID: 6058363292548331978, guid: 939ef72934325be4f87a355c093170eb,
+        type: 3}
+      propertyPath: _movementStability.m_Curve.Array.data[1].value
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7203269221524405012, guid: 939ef72934325be4f87a355c093170eb,
         type: 3}
       propertyPath: scale1
@@ -29214,7 +29229,12 @@ PrefabInstance:
         type: 3}
       propertyPath: _player
       value: 
-      objectReference: {fileID: 8119159223896701446}
+      objectReference: {fileID: 1211295827732099638}
+    - target: {fileID: 6058363292548331978, guid: 939ef72934325be4f87a355c093170eb,
+        type: 3}
+      propertyPath: _movementStability.m_Curve.Array.data[1].value
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7203269221524405012, guid: 939ef72934325be4f87a355c093170eb,
         type: 3}
       propertyPath: scale1
@@ -30396,6 +30416,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fed7625babaa77849b2d2210f4f76855, type: 3}
+--- !u!4 &1211295827732099638 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8804642831017242620, guid: fed7625babaa77849b2d2210f4f76855,
+    type: 3}
+  m_PrefabInstance: {fileID: 1211295827732099637}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5157660105089643212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30519,12 +30545,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fed7625babaa77849b2d2210f4f76855, type: 3}
---- !u!4 &8119159223896701446 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8804642831017242620, guid: fed7625babaa77849b2d2210f4f76855,
-    type: 3}
-  m_PrefabInstance: {fileID: 5157660105089643212}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
